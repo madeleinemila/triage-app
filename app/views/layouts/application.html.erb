@@ -9,6 +9,11 @@
   </head>
 
   <body>
+    <nav>
+      <%= link_to 'Home', root_path %>
+      <%= link_to 'Browse All Issues', issues_path %>
+    </nav>
+
     <%= yield %>
   </body>
 </html>
