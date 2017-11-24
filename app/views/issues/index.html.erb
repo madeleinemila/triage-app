@@ -1,2 +1,9 @@
-<h1>Issues#index</h1>
-<p>Find me in app/views/issues/index.html.erb</p>
+<h2>Browse All Issues</h2>
+
+<ul>
+  <% @issues.each do |i| %>
+    <li>
+      <%= link_to i.summary, issue_path(i.id) %>
+    </li>
+  <% end %>
+</ul>

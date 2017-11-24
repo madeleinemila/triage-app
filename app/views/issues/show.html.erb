@@ -1,2 +1,14 @@
-<h1>Issues#show</h1>
-<p>Find me in app/views/issues/show.html.erb</p>
+<h2><%= @issue.summary %></h2>
+
+<p><%= @issue.details %></p>
+
+
+<h2>Fixes</h2>
+
+<ul>
+<% @issue.fixes.each do |f| %>
+  <li>
+    <%= link_to f.title, '#' %>
+  </li>
+<% end %>
+</ul>
