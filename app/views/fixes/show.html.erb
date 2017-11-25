@@ -3,10 +3,16 @@
 
 <p><%= simple_format( @fix.steps ) %></p>
 
-<p>Fix last updated: <%= @fix.updated_at.strftime( "%B %e, %Y %H:%M UTC" )%></p>
-<%# TODO make client side adjust for user system local time %>
+<p class="updated-time">Last updated <%= time_ago_in_words @fix.updated_at %> ago</p>
 
 <div class="controls">
   <%= link_to 'Edit Fix', edit_fix_path(@fix.id) %>
   <%= link_to 'Delete Fix', @fix, :method => "delete", :data => { :confirm => "Are you sure you want to permanently delete this fix?" } %>
 </div>
+
+<h3>This fix relates to:</h3>
+<ul>
+  <% @fix.issues.each do |i| %>
+    <li><%= link_to i.summary, issue_path(i.id) %></li>
+  <% end %>
+</ul>
