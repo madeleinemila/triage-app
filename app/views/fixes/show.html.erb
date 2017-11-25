@@ -1,0 +1,12 @@
+<!-- FIX SHOW SINGLE PAGE -->
+<h2><%= @fix.title %></h2>
+
+<p><%= simple_format( @fix.steps ) %></p>
+
+<p>Fix last updated: <%= @fix.updated_at.strftime( "%B %e, %Y %H:%M UTC" )%></p>
+<%# TODO make client side adjust for user system local time %>
+
+<div class="controls">
+  <%= link_to 'Edit Fix', edit_fix_path(@fix.id) %>
+  <%= link_to 'Delete Fix', @fix, :method => "delete", :data => { :confirm => "Are you sure you want to permanently delete this fix?" } %>
+</div>

@@ -1,0 +1,17 @@
+<%= form_for @fix do |f| %>
+  <fieldset>
+    <%= f.label :title %>
+    <%= f.text_field :title, :class => "sentence" %>
+  </fieldset>
+
+  <fieldset>
+    <%= f.label :steps %>
+    <%= f.text_area :steps, :class => "sentence long-text" %>
+  </fieldset>
+
+  <fieldset>
+    <label></label>
+    <%= f.submit %>
+  </fieldset>
+
+<% end %>

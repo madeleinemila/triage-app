@@ -1,7 +1,7 @@
 <!-- ISSUES SHOW SINGLE -->
 <h2><%= @issue.summary %></h2>
 
-<p><%= @issue.details %></p>
+<p><%= simple_format( @issue.details ) %></p>
 
 
 <h2>Fixes</h2>
@@ -14,7 +14,7 @@
 <% end %>
 </ul>
 
-<p>Issue last updated: <%= @issue.updated_at.strftime( "%B %e, %Y" )%></p>
+<p>Issue last updated: <%= @issue.updated_at.strftime( "%B %e, %Y %H:%M UTC" )%></p>
 <%# TODO make client side adjust for user system local time %>
 
 <div class="controls">
