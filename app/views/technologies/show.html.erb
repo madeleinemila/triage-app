@@ -1,4 +1,4 @@
-
+<!-- TECH SHOW SINGLE -->
 <h2><%= @technology.name %></h2>
 
 <% if @links.present? %>
@@ -7,3 +7,31 @@
   <% end %>
 <% end %>
 <%# TODO probably better w md %>
+
+<p class="updated-time">Last updated <%= time_ago_in_words @technology.updated_at %> ago</p>
+
+
+<h3>This tech has these issues:</h3>
+<ul>
+  <% @technology.issues.each do |i| %>
+    <li>
+      <%= link_to i.summary, issue_path(i) %>
+    </li>
+  <% end %>
+</ul>
+
+<h3>This tech has these fixes:</h3>
+<ul>
+  <% @technology.fixes.each do |f| %>
+    <li>
+      <%= link_to f.title, fix_path(f) %>
+    </li>
+  <% end %>
+</ul>
+
+
+
+<div class="controls">
+  <%= link_to 'Edit Technology', edit_technology_path(@technology.id) %>
+  <%= link_to 'Delete Technology', @technology, :method => "delete", :data => { :confirm => "Are you sure you want to permanently delete this technology?" } %>
+</div>

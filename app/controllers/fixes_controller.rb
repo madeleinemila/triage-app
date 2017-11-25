@@ -22,18 +22,18 @@ class FixesController < ApplicationController
     redirect_to fix_path(fix)
   end
 
+  def show
+    @fix = Fix.find params[:id]
+  end
+
   def destroy
     fix = Fix.find params[:id]
     fix.destroy
     redirect_to fixes_path
   end
 
-  def show
-    @fix = Fix.find params[:id]
-  end
-
   private
   def fix_params
-    params.require(:fix).permit(:title, :steps, :issue_id)
+    params.require(:fix).permit(:title, :steps, :issue_id, :technology_id)
   end
 end

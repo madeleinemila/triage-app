@@ -1,4 +1,4 @@
-<!-- ISSUES SHOW SINGLE -->
+<!-- ISSUE SHOW SINGLE -->
 <h2>ISSUE:</h2>
 <h2><%= @issue.summary %></h2>
 
@@ -16,6 +16,16 @@
 </ul>
 
 <p class="updated-time">Last updated <%= time_ago_in_words @issue.updated_at %> ago</p>
+
+<h3>This issue involves:</h3>
+
+<% @issue.technologies.each do |t| %>
+  <li>
+    <%= link_to t.name, technology_path(t) %>
+  </li>
+<% end %>
+
+
 
 <div class="controls">
   <%= link_to 'Edit Issue', edit_issue_path(@issue.id) %>

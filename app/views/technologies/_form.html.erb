@@ -1,0 +1,17 @@
+<%= form_for @technology do |f| %>
+  <fieldset>
+    <%= f.label :name %>
+    <%= f.text_field :name, :class => "sentence" %>
+  </fieldset>
+
+  <fieldset>
+    <%= f.label :links, "Manual or useful links" %>
+    <%= f.text_area :links, :class => "sentence long-text" %>
+  </fieldset>
+
+  <fieldset>
+    <label></label>
+    <%= f.submit %>
+  </fieldset>
+
+<% end %>

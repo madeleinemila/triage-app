@@ -1,15 +1,10 @@
-<!-- FIX SHOW SINGLE PAGE -->
+<!-- FIX SHOW SINGLE -->
 <h2>FIX:</h2>
 <h2><%= @fix.title %></h2>
 
 <p><%= simple_format( @fix.steps ) %></p>
 
 <p class="updated-time">Last updated <%= time_ago_in_words @fix.updated_at %> ago</p>
-
-<div class="controls">
-  <%= link_to 'Edit Fix', edit_fix_path(@fix.id) %>
-  <%= link_to 'Delete Fix', @fix, :method => "delete", :data => { :confirm => "Are you sure you want to permanently delete this fix?" } %>
-</div>
 
 <h3>This fix relates to:</h3>
 <ul>
@@ -24,3 +19,10 @@
     <li><%= link_to t.name, '#' %></li>
   <% end %>
 </ul>
+
+
+
+<div class="controls">
+  <%= link_to 'Edit Fix', edit_fix_path(@fix.id) %>
+  <%= link_to 'Delete Fix', @fix, :method => "delete", :data => { :confirm => "Are you sure you want to permanently delete this fix?" } %>
+</div>

@@ -22,14 +22,14 @@ class IssuesController < ApplicationController
     redirect_to issue
   end
 
+  def show
+    @issue = Issue.find params[:id]
+  end
+
   def destroy
     issue = Issue.find params[:id]
     issue.destroy
     redirect_to issues_path
-  end
-
-  def show
-    @issue = Issue.find params[:id]
   end
 
   private
