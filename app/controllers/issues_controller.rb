@@ -13,6 +13,19 @@ class IssuesController < ApplicationController
   end
 
   def edit
+    @issue = Issue.find params[:id]
+  end
+
+  def update
+    issue = Issue.find params[:id]
+    issue.update issue_params
+    redirect_to issue
+  end
+
+  def destroy
+    issue = Issue.find params[:id]
+    issue.destroy
+    redirect_to issues_path
   end
 
   def show

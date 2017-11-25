@@ -1,3 +1,4 @@
+<!-- ISSUES SHOW SINGLE -->
 <h2><%= @issue.summary %></h2>
 
 <p><%= @issue.details %></p>
@@ -12,3 +13,8 @@
   </li>
 <% end %>
 </ul>
+
+<div class="controls">
+  <%= link_to 'Edit Issue', edit_issue_path(@issue.id) %>
+  <%= link_to 'Delete Issue', @issue, :method => "delete", :data => { :confirm => "Are you sure you want to permanently delete this issue?" } %>
+</div>

@@ -1,0 +1,17 @@
+<%= form_for @issue do |f| %>
+  <fieldset>
+    <%= f.label :summary %>
+    <%= f.text_field :summary, :class => "sentence" %>
+  </fieldset>
+
+  <fieldset>
+    <%= f.label :details %>
+    <%= f.text_area :details, :class => "sentence long-text" %>
+  </fieldset>
+
+  <fieldset>
+    <label></label>
+    <%= f.submit %>
+  </fieldset>
+
+<% end %>
