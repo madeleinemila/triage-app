@@ -48,4 +48,21 @@ input[type="submit"] {
   padding: 10px;
 }
 
- /***************************************************/
+ /****************  SIGN UP  *************************/
+
+.sign-up input {
+  display: block;
+  margin: 1em 0 1em 0;
+  box-sizing: border-box; /* TODO prefixes */
+  width: 250px;
+  height: 40px;
+}
+
+.field_with_errors > input {
+  border: 3px solid red;
+}
+
+
+
+
+  /***************************************************/
