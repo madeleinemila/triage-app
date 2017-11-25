@@ -14,6 +14,9 @@
 <% end %>
 </ul>
 
+<p>Issue last updated: <%= @issue.updated_at.strftime( "%B %e, %Y" )%></p>
+<%# TODO make client side adjust for user system local time %>
+
 <div class="controls">
   <%= link_to 'Edit Issue', edit_issue_path(@issue.id) %>
   <%= link_to 'Delete Issue', @issue, :method => "delete", :data => { :confirm => "Are you sure you want to permanently delete this issue?" } %>
