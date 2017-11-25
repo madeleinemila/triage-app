@@ -1,10 +1,11 @@
 <!-- ISSUES SHOW SINGLE -->
+<h2>ISSUE:</h2>
 <h2><%= @issue.summary %></h2>
 
 <p><%= simple_format( @issue.details ) %></p>
 
 
-<h2>Fixes</h2>
+<h2>FIX:</h2>
 
 <ul>
 <% @issue.fixes.each do |f| %>

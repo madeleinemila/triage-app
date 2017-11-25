@@ -11,4 +11,5 @@
 
 class Fix < ApplicationRecord
   has_and_belongs_to_many :issues
+  has_many :technologies, :through => "issues"
 end
