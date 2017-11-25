@@ -36,4 +36,7 @@ Rails.application.routes.draw do
   resources :issues
   resources :fixes
   resources :technologies
+  get '/login' => 'session#new'
+  post '/login' => 'session#create'
+  delete '/login' => 'session#destroy'
 end

@@ -48,7 +48,7 @@ input[type="submit"] {
   padding: 10px;
 }
 
- /****************  SIGN UP  *************************/
+ /****************  SIGN UP ********************************/
 
 .sign-up input {
   display: block;
@@ -62,7 +62,12 @@ input[type="submit"] {
   border: 3px solid red;
 }
 
+ /**************   LOGIN   *********************************/
 
+.login label {
+  vertical-align: middle;
+  width: 85px;
+}
 
 
   /***************************************************/

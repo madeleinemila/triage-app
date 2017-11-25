@@ -1,0 +1,18 @@
+<h2>Login</h2>
+
+<div class="login">
+  <%= form_tag login_path do %>
+    <fieldset>
+      <%= label_tag :email %>
+      <%= email_field_tag :email %>
+    </fieldset>
+    <fieldset>
+      <%= label_tag :password %>
+      <%= password_field_tag :password %>
+    </fieldset>
+    <fieldset>
+      <label></label>
+      <%= submit_tag "Login" %>
+    </fieldset>
+  <% end %>
+</div>
