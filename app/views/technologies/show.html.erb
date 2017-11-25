@@ -1,0 +1,9 @@
+
+<h2><%= @technology.name %></h2>
+
+<% if @links.present? %>
+  <% @links.each do |l| %>
+    <a><%= link_to l, l, :target => '_blank' %></a>
+  <% end %>
+<% end %>
+<%# TODO probably better w md %>
