@@ -1,8 +1,8 @@
 # == Route Map
 #
 #          Prefix Verb   URI Pattern                      Controller#Action
-#       users_new GET    /users/new(.:format)             users#new
 #            root GET    /                                pages#home
+#           users POST   /users(.:format)                 users#create
 #        new_user GET    /users/new(.:format)             users#new
 #          issues GET    /issues(.:format)                issues#index
 #                 POST   /issues(.:format)                issues#create
@@ -28,7 +28,10 @@
 #                 PATCH  /technologies/:id(.:format)      technologies#update
 #                 PUT    /technologies/:id(.:format)      technologies#update
 #                 DELETE /technologies/:id(.:format)      technologies#destroy
-#
+#           login GET    /login(.:format)                 session#new
+#                 POST   /login(.:format)                 session#create
+#                 DELETE /login(.:format)                 session#destroy
+# 
 
 Rails.application.routes.draw do
   root :to => "pages#home"

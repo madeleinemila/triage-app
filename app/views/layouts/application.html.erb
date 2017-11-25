@@ -12,6 +12,8 @@
     <nav>
       <%= link_to 'Home', root_path %>
       <%= link_to 'Sign Up', new_user_path  %>
+      <%= link_to 'Login', login_path  %>
+      <%= link_to 'Logout', login_path, :method => 'delete' %>
       <%= link_to 'Browse All Issues', issues_path %>
       <%= link_to 'New Issue', new_issue_path %>
       <%= link_to 'Browse All Fixes', fixes_path %>
