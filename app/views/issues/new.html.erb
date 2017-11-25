@@ -1,2 +1,19 @@
-<h1>Issues#new</h1>
-<p>Find me in app/views/issues/new.html.erb</p>
+<h2>New Issue</h2>
+
+<%= form_for @issue do |f| %>
+  <fieldset>
+    <%= f.label :summary %>
+    <%= f.text_field :summary, :class => "sentence" %>
+  </fieldset>
+
+  <fieldset>
+    <%= f.label :details %>
+    <%= f.text_area :details, :class => "sentence long-text" %>
+  </fieldset>
+
+  <fieldset>
+    <label></label>
+    <%= f.submit %>
+  </fieldset>
+
+<% end %>
