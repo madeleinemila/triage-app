@@ -1,7 +1,7 @@
 User.destroy_all
 
-u1 = User.create :name => "Admin", :email => "maddi.milasas@gmail.com"
-u2 = User.create :name => "Pepe Silvia", :email => "pepe@ga.co"
+u1 = User.create :name => "Admin", :email => "maddi.milasas@gmail.com", :password => "chicken"
+u2 = User.create :name => "Pepe Silvia", :email => "pepe@ga.co", :password => "chicken"
 
 Issue.destroy_all
 

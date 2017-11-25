@@ -1,7 +1,9 @@
 # == Route Map
 #
 #          Prefix Verb   URI Pattern                      Controller#Action
+#       users_new GET    /users/new(.:format)             users#new
 #            root GET    /                                pages#home
+#        new_user GET    /users/new(.:format)             users#new
 #          issues GET    /issues(.:format)                issues#index
 #                 POST   /issues(.:format)                issues#create
 #       new_issue GET    /issues/new(.:format)            issues#new
@@ -30,7 +32,7 @@
 
 Rails.application.routes.draw do
   root :to => "pages#home"
-  # resources :users, :only => [:new]
+  resources :users, :only => [:new, :create]
   resources :issues
   resources :fixes
   resources :technologies
