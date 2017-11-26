@@ -1,12 +1,10 @@
 <!-- TECH SHOW SINGLE -->
 <h2><%= @technology.name %></h2>
+<h2>REFERENCE:</h2>
 
-<% if @links.present? %>
-  <% @links.each do |l| %>
-    <a><%= link_to l, l, :target => '_blank' %></a>
-  <% end %>
+<% if @technology.links.present? %>
+  <%= markdown( @technology.links ) %>
 <% end %>
-<%# TODO probably better w md %>
 
 <p class="updated-time">Last updated <%= time_ago_in_words @technology.updated_at %> ago</p>
 

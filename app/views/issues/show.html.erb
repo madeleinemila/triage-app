@@ -2,7 +2,7 @@
 <h2>ISSUE:</h2>
 <h2><%= @issue.summary %></h2>
 
-<p><%= simple_format( @issue.details ) %></p>
+<p><%= markdown( @issue.details ) unless @issue.details.nil? %></p>
 
 
 <h2>FIX:</h2>

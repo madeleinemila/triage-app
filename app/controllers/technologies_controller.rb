@@ -24,9 +24,6 @@ class TechnologiesController < ApplicationController
 
   def show
     @technology = Technology.find params[:id]
-    unless @technology.links.nil?
-      @links = @technology.links.split(' ')
-    end
   end
 
   def destroy

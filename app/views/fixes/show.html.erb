@@ -2,7 +2,7 @@
 <h2>FIX:</h2>
 <h2><%= @fix.title %></h2>
 
-<p><%= simple_format( @fix.steps ) %></p>
+<p><%= markdown( @fix.steps ) unless @fix.steps.nil? %></p>
 
 <p class="updated-time">Last updated <%= time_ago_in_words @fix.updated_at %> ago</p>
 
@@ -16,7 +16,7 @@
 <h3>This fix involves:</h3>
 <ul>
   <% @fix.technologies.each do |t| %>
-    <li><%= link_to t.name, '#' %></li>
+    <li><%= link_to t.name, technology_path(t.id) %></li>
   <% end %>
 </ul>
 
