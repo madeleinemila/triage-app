@@ -4,6 +4,9 @@
 #            root GET    /                                pages#home
 #           users POST   /users(.:format)                 users#create
 #        new_user GET    /users/new(.:format)             users#new
+#       edit_user GET    /users/:id/edit(.:format)        users#edit
+#            user PATCH  /users/:id(.:format)             users#update
+#                 PUT    /users/:id(.:format)             users#update
 #          issues GET    /issues(.:format)                issues#index
 #                 POST   /issues(.:format)                issues#create
 #       new_issue GET    /issues/new(.:format)            issues#new
@@ -35,7 +38,7 @@
 
 Rails.application.routes.draw do
   root :to => "pages#home"
-  resources :users, :only => [:new, :create]
+  resources :users, :only => [:new, :create, :edit, :update]
   resources :issues
   resources :fixes
   resources :technologies

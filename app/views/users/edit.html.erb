@@ -1,0 +1,24 @@
+<h2>Edit Profile</h2>
+
+<%= form_for @user do |f| %>
+  <fieldset>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </fieldset>
+  <fieldset>
+    <%= f.label :email %>
+    <%= f.email_field :email %>
+  </fieldset>
+  <fieldset>
+    <label></label>
+    <%= f.submit %>
+  </fieldset>
+<% end %>
+
+<%# TODO make these partials %>
+<% if @user.errors.any? %>
+  <p>Sorry, please try again:</p>
+  <% @user.errors.full_messages.each do |msg| %>
+  <p><%= msg %></p>
+  <% end %>
+<% end %>
