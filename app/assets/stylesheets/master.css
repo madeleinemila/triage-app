@@ -65,13 +65,19 @@ input[type="submit"] {
 .field_with_errors > input {
   border: 3px solid red;
 }
+/****************** TABLES e.g. all users *********************************/
 
- /**************   LOGIN   *********************************/
+.table-header {
+  text-transform: uppercase;
+  font-weight: bold;
+}
 
-/*.login label {
-  vertical-align: middle;
-  width: 85px;
-}*/
+td.name {
+  width: 200px;
+}
 
+td.admin {
+  width: 100px;
+}
 
-  /***************************************************/
+/***************************************************/

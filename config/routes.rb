@@ -2,7 +2,8 @@
 #
 #          Prefix Verb   URI Pattern                      Controller#Action
 #            root GET    /                                pages#home
-#           users POST   /users(.:format)                 users#create
+#           users GET    /users(.:format)                 users#index
+#                 POST   /users(.:format)                 users#create
 #        new_user GET    /users/new(.:format)             users#new
 #       edit_user GET    /users/:id/edit(.:format)        users#edit
 #            user PATCH  /users/:id(.:format)             users#update
@@ -38,7 +39,7 @@
 
 Rails.application.routes.draw do
   root :to => "pages#home"
-  resources :users, :only => [:new, :create, :edit, :update]
+  resources :users, :only => [:index, :new, :create, :edit, :update]
   resources :issues
   resources :fixes
   resources :technologies
