@@ -1,14 +1,20 @@
 <h2>Login</h2>
 
-<p><%= flash[:error] %>&nbsp;</p>
-
-<div class="login">
+<div class="user-info">
   <%= form_tag login_path do %>
+  <% if flash[:error] %>
+    <fieldset class="field_with_errors" >
+  <% else %>
     <fieldset>
+  <% end %>
       <%= label_tag :email %>
-      <%= email_field_tag :email %>
+      <%= email_field_tag :email, nil, :autofocus => true %>
     </fieldset>
+  <% if flash[:error] %>
+    <fieldset class="field_with_errors" >
+  <% else %>
     <fieldset>
+  <% end %>
       <%= label_tag :password %>
       <%= password_field_tag :password %>
     </fieldset>
@@ -18,3 +24,5 @@
     </fieldset>
   <% end %>
 </div>
+
+<p><%= flash[:error] %>&nbsp;</p>

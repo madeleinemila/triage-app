@@ -48,14 +48,18 @@ input[type="submit"] {
   padding: 10px;
 }
 
- /****************  SIGN UP ********************************/
+ /****************  SIGN UP & EDIT PROFILE ********************************/
 
-.sign-up input {
+.user-info input {
   display: block;
   margin: 1em 0 1em 0;
   box-sizing: border-box; /* TODO prefixes */
-  width: 250px;
+  width: 400px;
   height: 40px;
+}
+
+.user-info label {
+  width: 400px;
 }
 
 .field_with_errors > input {
@@ -64,10 +68,10 @@ input[type="submit"] {
 
  /**************   LOGIN   *********************************/
 
-.login label {
+/*.login label {
   vertical-align: middle;
   width: 85px;
-}
+}*/
 
 
   /***************************************************/

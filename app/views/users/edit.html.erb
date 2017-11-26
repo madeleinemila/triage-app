@@ -1,19 +1,21 @@
 <h2>Edit Profile</h2>
 
-<%= form_for @user do |f| %>
-  <fieldset>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </fieldset>
-  <fieldset>
-    <%= f.label :email %>
-    <%= f.email_field :email %>
-  </fieldset>
-  <fieldset>
-    <label></label>
-    <%= f.submit %>
-  </fieldset>
-<% end %>
+<div class="user-info">
+  <%= form_for @user do |f| %>
+    <fieldset>
+      <%= f.label :name %>
+      <%= f.text_field :name, :autofocus => true %>
+    </fieldset>
+    <fieldset>
+      <%= f.label :email %>
+      <%= f.email_field :email %>
+    </fieldset>
+    <fieldset>
+      <label></label>
+      <%= f.submit "Update profile" %>
+    </fieldset>
+  <% end %>
+</div>
 
 <%# TODO make these partials %>
 <% if @user.errors.any? %>
