@@ -19,12 +19,13 @@
 
 <h3>This issue involves:</h3>
 
-<% @issue.technologies.each do |t| %>
-  <li>
-    <%= link_to t.name, technology_path(t) %>
-  </li>
-<% end %>
-
+<ul>
+  <% @issue.technologies.each do |t| %>
+    <li>
+      <%= link_to t.name, technology_path(t) %>
+    </li>
+  <% end %>
+</ul>
 
 
 <div class="controls">
