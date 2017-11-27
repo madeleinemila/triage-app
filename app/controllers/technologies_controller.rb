@@ -2,7 +2,7 @@ class TechnologiesController < ApplicationController
   before_action :check_if_admin, :except => [:index, :show]
 
   def index
-    @technologies = Technology.all
+    @technologies = Technology.all.sort_by { |t| t.name.downcase }
   end
 
   def new

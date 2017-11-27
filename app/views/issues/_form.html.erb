@@ -9,6 +9,12 @@
     <%= f.text_area :details, :class => "sentence long-text" %>
   </fieldset>
 
+  <!-- select related tech -->
+  <fieldset>
+    <%= f.label :technology_id %>
+    <%= f.collection_check_boxes :technology_ids, @technologies, :id, :name %>
+  </fieldset>
+
   <fieldset>
     <label></label>
     <%= f.submit %>
