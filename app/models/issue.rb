@@ -11,6 +11,9 @@
 #
 
 class Issue < ApplicationRecord
+  # TODO validations
   has_and_belongs_to_many :fixes
   has_and_belongs_to_many :technologies
+  include PgSearch
+  pg_search_scope :search_by_summary, against:[:summary]
 end

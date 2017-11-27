@@ -7,6 +7,8 @@ end
 
 # Added - for Heroku
 gem 'rails_12factor', group: :production
+# Added - for Postgres search
+gem 'pg_search'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'

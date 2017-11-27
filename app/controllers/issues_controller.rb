@@ -2,7 +2,11 @@ class IssuesController < ApplicationController
   before_action :check_if_admin, :except => [:index, :show]
 
   def index
-    @issues = Issue.all
+    if params[:term]
+      @issues = Issue.search_by_summary(params[:term])
+    else
+      @issues = Issue.all
+    end
   end
 
   def new

@@ -1,5 +1,12 @@
 <h2>All Issues</h2>
 
+<!-- SEARCH ISSUES -->
+<%= form_tag(issues_path, method: :get) do %>
+  <%= text_field_tag 'term', params[:term], placeholder: 'What are you having trouble with?', class: "search sentence" %>
+  <%= submit_tag 'Search Issues' %>
+<% end %>
+<!------>
+
 <ul>
   <% @issues.each do |i| %>
     <li>
