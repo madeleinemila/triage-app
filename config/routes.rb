@@ -35,7 +35,7 @@
 #           login GET    /login(.:format)                 session#new
 #                 POST   /login(.:format)                 session#create
 #                 DELETE /login(.:format)                 session#destroy
-# 
+#
 
 Rails.application.routes.draw do
   root :to => "pages#home"
@@ -43,6 +43,7 @@ Rails.application.routes.draw do
   resources :issues
   resources :fixes
   resources :technologies
+  resources :favorite_issues, :only => [:create, :destroy]
   get '/login' => 'session#new'
   post '/login' => 'session#create'
   delete '/login' => 'session#destroy'

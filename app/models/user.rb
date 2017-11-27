@@ -16,5 +16,7 @@ class User < ApplicationRecord
   validates :name, :presence => true
   validates :email, :presence => true, :uniqueness => true
   validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
-  # validates_presence_of :password_confirmation, :if => :password_digest_changed? # CHANGED
+  # polymorphic
+  has_many :favorites
+  has_many :favorite_issues, :through => :favorites, :source => "favorited", :source_type => "Issue"
 end
