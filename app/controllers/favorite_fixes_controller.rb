@@ -3,9 +3,9 @@ class FavoriteFixesController < ApplicationController
 
   def create
     if Favorite.create(favorited: @fix, user: @current_user)
-      redirect_to @fix, notice: 'Fix has been pinned'
+      redirect_to @fix
     else
-      redirect_to @fix, alert: 'Sorry, something went wrong...'
+      redirect_to @fix, alert: "Sorry, I can't pin that for you."
     end
   end
 

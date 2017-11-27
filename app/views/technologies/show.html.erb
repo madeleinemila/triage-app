@@ -6,6 +6,8 @@
   <%= markdown( @technology.links ) %>
 <% end %>
 
+<%= render partial: "pin" %>
+
 <p class="updated-time">Last updated <%= time_ago_in_words @technology.updated_at %> ago</p>
 
 
