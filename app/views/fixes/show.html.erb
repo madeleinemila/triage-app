@@ -4,6 +4,8 @@
 
 <p><%= markdown( @fix.steps ) unless @fix.steps.nil? %></p>
 
+<%= render partial: "pin" %>
+
 <p class="updated-time">Last updated <%= time_ago_in_words @fix.updated_at %> ago</p>
 
 <h3>This fix relates to:</h3>

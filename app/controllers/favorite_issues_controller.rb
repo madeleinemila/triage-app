@@ -3,9 +3,9 @@ class FavoriteIssuesController < ApplicationController
 
   def create
     if Favorite.create(favorited: @issue, user: @current_user)
-      redirect_to @issue, notice: 'Project has been favorited'
+      redirect_to @issue, notice: 'Issue has been pinned'
     else
-      redirect_to @issue, alert: 'Something went wrong...'
+      redirect_to @issue, alert: 'Sorry, something went wrong...'
     end
   end
 

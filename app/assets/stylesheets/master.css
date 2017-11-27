@@ -19,6 +19,10 @@ nav > a {
   font-size: 12px;
 }
 
+nav > .current-user {
+  font-size: 12px;
+}
+
 /******************** FORMS ************************/
 
 fieldset {
