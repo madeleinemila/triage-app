@@ -19,4 +19,6 @@ class User < ApplicationRecord
   # polymorphic
   has_many :favorites
   has_many :favorite_issues, :through => :favorites, :source => "favorited", :source_type => "Issue"
+  has_many :favorite_fixes, :through => :favorites, :source => "favorited", :source_type => "Fix"
+  has_many :favorite_technologies, :through => :favorites, :source => "favorited", :source_type => "Technology"
 end
