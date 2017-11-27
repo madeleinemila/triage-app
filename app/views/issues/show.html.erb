@@ -1,13 +1,11 @@
 <!-- ISSUE SHOW SINGLE -->
 <h2>ISSUE:</h2>
 <h2><%= @issue.summary %></h2>
-
 <p><%= markdown( @issue.details ) unless @issue.details.nil? %></p>
 
 <%= render partial: "pin" %>
 
 <h2>FIX:</h2>
-
 <ul>
 <% @issue.fixes.each do |f| %>
   <li>
@@ -19,7 +17,6 @@
 <p class="updated-time">Last updated <%= time_ago_in_words @issue.updated_at %> ago</p>
 
 <h3>This issue involves:</h3>
-
 <ul>
   <% @issue.technologies.each do |t| %>
     <li>
@@ -28,8 +25,5 @@
   <% end %>
 </ul>
 
-
-<div class="controls">
-  <%= link_to 'Edit Issue', edit_issue_path(@issue.id) %>
-  <%= link_to 'Delete Issue', @issue, :method => "delete", :data => { :confirm => "Are you sure you want to permanently delete this issue?" } %>
-</div>
+<!-- ADMIN CONTROLS -->
+<%= render partial: "shared/admin_ctrl" %>

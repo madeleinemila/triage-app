@@ -1,4 +1,6 @@
 class IssuesController < ApplicationController
+  before_action :check_if_admin, :except => [:index, :show]
+
   def index
     @issues = Issue.all
   end
@@ -24,6 +26,7 @@ class IssuesController < ApplicationController
 
   def show
     @issue = Issue.find params[:id]
+    @ctrl = { :type => "issue", :ed => edit_issue_path(@issue.id), :del => @issue }
   end
 
   def destroy

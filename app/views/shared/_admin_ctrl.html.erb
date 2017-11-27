@@ -1,0 +1,6 @@
+<% if @current_user.present? && @current_user.admin? %>
+  <div class="controls">
+    <%= link_to "Edit #{@ctrl[:type]}", @ctrl[:ed] %>
+    <%= link_to "Delete #{@ctrl[:type]}", @ctrl[:del], :method => "delete", :data => { :confirm => "Are you sure you want to permanently delete this #{@ctrl[:type]}?" } %>
+  </div>
+<% end %>

@@ -1,4 +1,6 @@
 class TechnologiesController < ApplicationController
+  before_action :check_if_admin, :except => [:index, :show]
+
   def index
     @technologies = Technology.all
   end
@@ -24,6 +26,7 @@ class TechnologiesController < ApplicationController
 
   def show
     @technology = Technology.find params[:id]
+    @ctrl = { :type => "technology", :ed => edit_technology_path(@technology.id), :del => @technology }
   end
 
   def destroy

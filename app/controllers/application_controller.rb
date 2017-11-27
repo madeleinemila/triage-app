@@ -14,7 +14,11 @@ class ApplicationController < ActionController::Base
   end
 
   def check_if_admin
-    redirect_to root_path unless (@current_user.present? && @current_user.admin?)
+    if @current_user.present?
+      redirect_to root_path unless @current_user.admin?
+    else
+      redirect_to login_path
+    end
   end
 
 end

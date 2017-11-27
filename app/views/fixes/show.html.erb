@@ -1,7 +1,6 @@
 <!-- FIX SHOW SINGLE -->
 <h2>FIX:</h2>
 <h2><%= @fix.title %></h2>
-
 <p><%= markdown( @fix.steps ) unless @fix.steps.nil? %></p>
 
 <%= render partial: "pin" %>
@@ -23,8 +22,5 @@
 </ul>
 
 
-
-<div class="controls">
-  <%= link_to 'Edit Fix', edit_fix_path(@fix.id) %>
-  <%= link_to 'Delete Fix', @fix, :method => "delete", :data => { :confirm => "Are you sure you want to permanently delete this fix?" } %>
-</div>
+<!-- ADMIN CONTROLS -->
+<%= render partial: "shared/admin_ctrl" %>

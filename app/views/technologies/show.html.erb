@@ -29,9 +29,5 @@
   <% end %>
 </ul>
 
-
-
-<div class="controls">
-  <%= link_to 'Edit Technology', edit_technology_path(@technology.id) %>
-  <%= link_to 'Delete Technology', @technology, :method => "delete", :data => { :confirm => "Are you sure you want to permanently delete this technology?" } %>
-</div>
+<!-- ADMIN CONTROLS -->
+<%= render partial: "shared/admin_ctrl" %>

@@ -1,4 +1,6 @@
 class FixesController < ApplicationController
+  before_action :check_if_admin, :except => [:index, :show]
+
   def index
     @fixes = Fix.all
   end
@@ -24,6 +26,7 @@ class FixesController < ApplicationController
 
   def show
     @fix = Fix.find params[:id]
+    @ctrl = { :type => "fix", :ed => edit_fix_path(@fix.id), :del => @fix }
   end
 
   def destroy
