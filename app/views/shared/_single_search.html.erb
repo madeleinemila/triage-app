@@ -1,0 +1,5 @@
+<%= form_tag(@search[:path], method: :get) do %>
+  <%= text_field_tag 'term', params[:term], placeholder: 'What can I help you find?', class: "search sentence" %>
+  <%= submit_tag "Search #{@search[:type]}" %>
+<% end %>
+<%= link_to 'Clear Search', @search[:path] %>

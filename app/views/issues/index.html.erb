@@ -1,11 +1,9 @@
 <h2>All Issues</h2>
 
-<!-- SEARCH ISSUES -->
-<%= form_tag(issues_path, method: :get) do %>
-  <%= text_field_tag 'term', params[:term], placeholder: 'What are you having trouble with?', class: "search sentence" %>
-  <%= submit_tag 'Search Issues' %>
-<% end %>
+<!-- SEARCH -->
+<%= render partial: "shared/single_search" %>
 <!------>
+
 
 <ul>
   <% @issues.each do |i| %>

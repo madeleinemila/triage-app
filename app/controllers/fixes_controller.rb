@@ -2,7 +2,12 @@ class FixesController < ApplicationController
   before_action :check_if_admin, :except => [:index, :show]
 
   def index
-    @fixes = Fix.all
+    if params[:term]
+      @fixes = Fix.search_by_title_and_steps(params[:term])
+    else
+      @fixes = Fix.all
+    end
+    @search = { :path => fixes_path, :type => "Fixes"  }
   end
 
   def new
