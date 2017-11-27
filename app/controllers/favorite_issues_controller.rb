@@ -10,8 +10,8 @@ class FavoriteIssuesController < ApplicationController
   end
 
   def destroy
-    Favorite.where(favorited_id: @issue.id, user_id: current_user.id).first.destroy
-    redirect_to @issue, notice: 'Project is no longer in favorites'
+    Favorite.where(favorited_id: @issue.id, user_id: @current_user.id).first.destroy
+    redirect_to @issue
   end
 
   private

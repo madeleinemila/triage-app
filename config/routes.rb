@@ -32,10 +32,12 @@
 #                 PATCH  /technologies/:id(.:format)      technologies#update
 #                 PUT    /technologies/:id(.:format)      technologies#update
 #                 DELETE /technologies/:id(.:format)      technologies#destroy
+# favorite_issues POST   /favorite_issues(.:format)       favorite_issues#create
+#  favorite_issue DELETE /favorite_issues/:id(.:format)   favorite_issues#destroy
 #           login GET    /login(.:format)                 session#new
 #                 POST   /login(.:format)                 session#create
 #                 DELETE /login(.:format)                 session#destroy
-#
+# 
 
 Rails.application.routes.draw do
   root :to => "pages#home"
