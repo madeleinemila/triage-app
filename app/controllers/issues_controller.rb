@@ -17,6 +17,7 @@ class IssuesController < ApplicationController
 
   def edit
     @issue = Issue.find params[:id]
+    @technologies = Technology.all.sort_by { |t| t.name.downcase }
   end
 
   def update

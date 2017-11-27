@@ -37,6 +37,6 @@ class FixesController < ApplicationController
 
   private
   def fix_params
-    params.require(:fix).permit(:title, :steps, :issue_id, :technology_id)
+    params.require(:fix).permit(:title, :steps, :technology_id, :issue_ids)
   end
 end
