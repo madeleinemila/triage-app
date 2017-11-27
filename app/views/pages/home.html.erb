@@ -7,13 +7,13 @@
   <h2>PINS</h2>
 
   <% @current_user.favorite_issues.each do |fi| %>
-    <p><%= link_to fi.summary, issue_path(fi) %></p>
+    <p>[issue] <%= link_to fi.summary, issue_path(fi) %></p>
   <% end %>
   <% @current_user.favorite_fixes.each do |ff| %>
-    <p><%= link_to ff.title, fix_path(ff) %></p>
+    <p>[fix] <%= link_to ff.title, fix_path(ff) %></p>
   <% end %>
   <% @current_user.favorite_technologies.each do |ft| %>
-    <p><%= link_to ft.name, technology_path(ft) %></p>
+    <p>[tech] <%= link_to ft.name, technology_path(ft) %></p>
   <% end %>
 
 <% end %>
