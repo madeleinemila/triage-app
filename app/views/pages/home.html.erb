@@ -1,9 +1,22 @@
 <h1>TRIAGE</h1>
 
+<!-- MULTI SEARCH -->
+<%= form_tag('/', method: :get) do %>
+  <%= text_field_tag 'term', params[:term], placeholder: 'What can I help you find?', class: "search sentence" %>
+  <%= submit_tag "Search Entire Knowledge Base" %>
+<% end %>
+<%= link_to 'Clear Search', '/' %>
+
+<ul>
+  <% @results.each do |r| %>
+    <li><%= r.content %></li>
+  <% end %>
+</ul>
+<!-- end search -->
+
 <% if session[:user_id].present? %>
+
   <p>Welcome <%= @current_user.name %></p>
-
-
   <h2>PINS</h2>
 
   <% @current_user.favorite_issues.each do |fi| %>

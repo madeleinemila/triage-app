@@ -20,4 +20,5 @@ class Fix < ApplicationRecord
         dictionary: "english"
       }
     }
+  multisearchable :against => [:title]
 end

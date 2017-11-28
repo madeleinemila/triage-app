@@ -23,4 +23,5 @@ class Issue < ApplicationRecord
         dictionary: "english"
       }
     }
+  multisearchable :against => [:summary]
 end
