@@ -1,7 +1,9 @@
-<% unless @current_user.favorite_issues.exists?(id: @issue.id) %>
-  <p>&nbsp;</p>
-  <%= link_to 'Add to pins', favorite_issues_path(issue_id: @issue), method: :post %>
-<% else %>
-  <p>PINNED</p>
-  <%= link_to 'Remove from pins', favorite_issue_path(@issue), method: :delete %>
+<% if @current_user.present? %>
+  <% unless @current_user.favorite_issues.exists?(id: @issue.id) %>
+    <p>&nbsp;</p>
+    <%= link_to 'Add to pins', favorite_issues_path(issue_id: @issue), method: :post %>
+  <% else %>
+    <p>PINNED</p>
+    <%= link_to 'Remove from pins', favorite_issue_path(@issue), method: :delete %>
+  <% end %>
 <% end %>

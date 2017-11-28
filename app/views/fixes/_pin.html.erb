@@ -1,7 +1,9 @@
-<% unless @current_user.favorite_fixes.exists?(id: @fix.id) %>
-  <p>&nbsp;</p>
-  <%= link_to 'Add to pins', favorite_fixes_path(fix_id: @fix), method: :post %>
-<% else %>
-  <p>PINNED</p>
-  <%= link_to 'Remove from pins', favorite_fix_path(@fix), method: :delete %>
+<% if @current_user.present? %>
+  <% unless @current_user.favorite_fixes.exists?(id: @fix.id) %>
+    <p>&nbsp;</p>
+    <%= link_to 'Add to pins', favorite_fixes_path(fix_id: @fix), method: :post %>
+  <% else %>
+    <p>PINNED</p>
+    <%= link_to 'Remove from pins', favorite_fix_path(@fix), method: :delete %>
+  <% end %>
 <% end %>
