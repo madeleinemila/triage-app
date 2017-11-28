@@ -19,4 +19,5 @@ class Technology < ApplicationRecord
         prefix: true
       }
     }
+  multisearchable :against => [:name]
 end
