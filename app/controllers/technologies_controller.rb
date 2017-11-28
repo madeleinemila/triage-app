@@ -2,7 +2,13 @@ class TechnologiesController < ApplicationController
   before_action :check_if_admin, :except => [:index, :show]
 
   def index
-    @technologies = Technology.all.sort_by { |t| t.name.downcase }
+    if params[:term]
+      @technologies = Technology.search_by_name(params[:term])
+      @technologies = @technologies.sort_by { |t| t.name.downcase }
+    else
+      @technologies = Technology.all.sort_by { |t| t.name.downcase }
+    end
+    @search = { :path => technologies_path, :type => "Tech"  }
   end
 
   def new
