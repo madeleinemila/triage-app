@@ -13,5 +13,10 @@ class Fix < ApplicationRecord
   has_and_belongs_to_many :issues
   has_many :technologies, :through => "issues"
   include PgSearch
-  pg_search_scope :search_by_title_and_steps, against: [:title, :steps] # TODO primacy on steps
+  pg_search_scope :search_by_title_and_steps, against: [:title, :steps],
+    using: {
+      tsearch: {
+        prefix: true
+      }
+    }
 end

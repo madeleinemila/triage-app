@@ -13,5 +13,10 @@ class Technology < ApplicationRecord
   has_and_belongs_to_many :issues
   has_many :fixes, :through => "issues"
   include PgSearch
-  pg_search_scope :search_by_name, against: :name
+  pg_search_scope :search_by_name, against: :name,
+    using: {
+      tsearch: {
+        prefix: true
+      }
+    }
 end
