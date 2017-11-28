@@ -9,7 +9,7 @@
 
 <ul>
   <% @results.each do |r| %>
-    <li><%= r.content %></li>
+    <li><%= link_to r.content, r.searchable %></li>
   <% end %>
 </ul>
 <!-- end search -->
