@@ -3,7 +3,7 @@ class IssuesController < ApplicationController
 
   def index
     if params[:term]
-      @issues = Issue.search_by_summary(params[:term])
+      @issues = Issue.search_by_summary_and_det(params[:term])
     else
       @issues = Issue.all
     end

@@ -15,5 +15,5 @@ class Issue < ApplicationRecord
   has_and_belongs_to_many :fixes
   has_and_belongs_to_many :technologies
   include PgSearch
-  pg_search_scope :search_by_summary, against: [:summary]
+  pg_search_scope :search_by_summary_and_det, against: [:summary, :details]
 end
