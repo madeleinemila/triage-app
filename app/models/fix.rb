@@ -16,7 +16,9 @@ class Fix < ApplicationRecord
   pg_search_scope :search_by_title_and_steps, against: [:title, :steps],
     using: {
       tsearch: {
-        prefix: true
+        prefix: true,
+        any_word: true,
+        dictionary: "english"
       }
     }
 end

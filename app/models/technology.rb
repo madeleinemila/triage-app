@@ -16,7 +16,8 @@ class Technology < ApplicationRecord
   pg_search_scope :search_by_name, against: :name,
     using: {
       tsearch: {
-        prefix: true
+        prefix: true,
+        any_word: true
       }
     }
 end

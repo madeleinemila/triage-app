@@ -18,7 +18,9 @@ class Issue < ApplicationRecord
   pg_search_scope :search_by_summary_and_det, against: [:summary, :details],
     using: {
       tsearch: {
-        prefix: true
+        prefix: true,
+        any_word: true,
+        dictionary: "english"
       }
     }
 end
