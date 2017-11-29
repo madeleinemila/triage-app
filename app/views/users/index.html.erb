@@ -1,18 +1,23 @@
-<h2>All Users</h2>
 
-<table>
-  <tr class="table-header">
-    <td>Name</td>
-    <td>Admin</td>
-    <td>Email</td>
-  </tr>
-  <% @users.each do |u| %>
-    <tr>
-      <td class="name"><%= u.name %></td>
-      <td class="admin"><%= u.admin? %></td>
-      <td class="email"><%= u.email %></td>
-    </tr>
-  <% end %>
-</table>
+<div class="show-container">
+  <h2 class="fix-slash">All Users</h2>
+</div>
 
-<%# TODO redo w grid? %>
+<div class="lower-container">
+  <div class="user-list">
+    <table>
+      <tr class="table-header">
+        <td>Name</td>
+        <td>Admin</td>
+        <td>Email</td>
+      </tr>
+      <% @users.each do |u| %>
+        <tr>
+          <td class="name"><%= u.name %></td>
+          <td class="admin"><%= u.admin? %></td>
+          <td class="email"><%= u.email %></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
