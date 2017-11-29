@@ -1,23 +1,19 @@
 <div class="form-inner-bound">
-    <h2 class="user-form-heading">Create an account</h2>
+    <p class="user-form-heading">Create an account to pin entries to your home page</p>
 
-    <div class="user-info">
+    <div class="new-user-info">
       <%= form_for @user do |f| %>
         <fieldset>
-              <%= f.label :name %>
-              <%= f.text_field :name, :autofocus => true %>
+              <%= f.text_field :name, :autofocus => true, :placeholder => "Name" %>
         </fieldset>
         <fieldset>
-              <%= f.label :email %>
-              <%= f.email_field :email %>
+              <%= f.email_field :email, :placeholder => "Email" %>
         </fieldset>
         <fieldset>
-              <%= f.label :password %>
-              <%= f.password_field :password %>
+              <%= f.password_field :password, :placeholder => "Enter a password, minimum 6 characters" %>
         </fieldset>
         <fieldset>
-              <%= f.label :password_confirmation, "Retype password" %>
-              <%= f.password_field :password_confirmation %>
+              <%= f.password_field :password_confirmation, :placeholder => "Retype password" %>
         </fieldset>
         <fieldset>
               <label></label>

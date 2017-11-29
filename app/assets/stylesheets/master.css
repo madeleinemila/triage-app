@@ -129,7 +129,9 @@ input[type="submit"] {
 }
 
 .form-inner-bound {
-  background-color: rgba(0, 0, 0, 0.5);
+  /*background-color: rgba(0, 0, 0, 0.6);*/
+  background-color: rgba(50, 75, 111, 0.8); /*bluegrey darker*/
+  background-color: rgba(31, 47, 71, 0.9); /*bluegrey darkest*/
   color: white;
   max-width: 960px;
   margin: 0 auto;
@@ -152,6 +154,19 @@ form.new-user {
   box-sizing: border-box; /* TODO prefixes */
   width: 400px;
   height: 54px;
+}
+
+.new-user-info input {
+  display: block;
+  margin: 10px 0 10px 0;
+  box-sizing: border-box; /* TODO prefixes */
+  width: 400px;
+  font-size: 14px;
+}
+
+.new_user {
+  padding: 5px;
+  padding-left: 60px;
 }
 
 .user-info label {
