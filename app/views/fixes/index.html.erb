@@ -1,13 +1,28 @@
-<h2>All Fixes</h2>
-
-<!-- SEARCH -->
+<!-- SEARCH FIXES-->
 <%= render partial: "shared/single_search" %>
 <!------>
 
-<ul>
-  <% @fixes.each do |f| %>
-    <li>
-      <%= link_to f.title, fix_path(f.id) %>
-    </li>
-  <% end %>
-</ul>
+<% if params[:term] %>
+  <ul class=god-results>
+    <% @fixes.each do |f| %>
+      <li>
+        <%= link_to f.title, fix_path(f.id) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+
+<div class="lower-container">
+  <div class="inner-bound">
+    <h2>All Fixes</h2>
+
+    <ul class="all-list fix-list">
+      <% @fixes_all.each do |f| %>
+        <li>
+          <%= link_to f.title, fix_path(f.id) %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>

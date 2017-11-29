@@ -5,9 +5,10 @@ class FixesController < ApplicationController
     if params[:term]
       @fixes = Fix.search_by_title_and_steps(params[:term])
     else
-      @fixes = Fix.all
+      @fixes = {}
     end
-    @search = { :path => fixes_path, :type => "Search a list of all fix procedures here"  }
+    @fixes_all = Fix.all
+    @search = { :path => fixes_path, :type => "Search a list of all fix procedures here", :class => "fix-slash"  }
   end
 
   def new

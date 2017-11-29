@@ -156,6 +156,10 @@ input.search {
     color: rgba(248, 146, 45, 1.00); /*orange*/
 }
 
+.fix-slash {
+  color: rgba(209, 219, 47, 1.00); /*green*/
+}
+
 /****************** TABLES e.g. all users ***************************/
 
 .table-header {
@@ -221,6 +225,13 @@ a.clear-search {
   font-family: 'Nunito', sans-serif;
 }
 
+.god-results {
+  max-width: 960px;
+  margin: 0 auto;
+  padding-bottom: 50px;
+  padding-left: 80px;
+}
+
 .god-results li {
   padding: 10px;
 }
@@ -252,23 +263,20 @@ a.clear-search {
   list-style-type: none;
 }
 
-.issue-list li::before {
-  color: rgba(246, 145, 58, 1.00);
-  /* color of bullet or square */
-
-  content: "\2022";
-  /* Unicode of character to precede the list item */
-
+.all-list li::before {
+  content: "\2022";  /* Unicode of character to precede the list item */
   font-size: 2em;
-  /* em or %*/
-
   padding-right: 1.1225em;
-  /* use em*/
-
   position: relative;
   top: 5px;
-  /* use em or % */
+}
 
+.issue-list {
+  color: rgba(246, 145, 58, 1.00);  /* color of bullet or square */
+}
+
+.fix-list {
+  color: rgba(209, 219, 47, 1.00); /*green*/
 }
 
 .all-list li a {
