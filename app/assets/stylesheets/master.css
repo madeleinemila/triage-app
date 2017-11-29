@@ -200,7 +200,7 @@ td.admin {
 /*******************************/
 
 .container {
-  background-image: url(/assets/bg_server_detail.jpg);
+  background-image: url(https://res.cloudinary.com/mrmy/image/upload/v1511939929/bg_server_detail_ze0sbq.jpg);
   background-size: cover;
   background-attachment: fixed;
   height: 105vh;
