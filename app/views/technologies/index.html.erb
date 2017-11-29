@@ -1,13 +1,27 @@
-<h2>All Technologies</h2>
-
 <!-- SEARCH -->
 <%= render partial: "shared/single_search" %>
 <!------>
 
-<ul>
-  <% @technologies.each do |t| %>
-    <li>
-      <%= link_to t.name, technology_path(t.id) %>
-    </li>
-  <% end %>
-</ul>
+<% if params[:term] %>
+  <ul class=god-results>
+    <% @technologies.each do |t| %>
+      <li>
+        <%= link_to t.name, technology_path(t.id) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<div class="lower-container">
+  <div class="inner-bound">
+    <h2>All Technologies</h2>
+
+    <ul class="all-list tech-list">
+      <% @technologies_all.each do |t| %>
+        <li>
+          <%= link_to t.name, technology_path(t.id) %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>

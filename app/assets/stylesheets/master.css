@@ -58,11 +58,11 @@ nav > a:hover {
 
 nav > .current-user {
   font-size: 12px;
-  color: rgba(209, 219, 47, 1.00); /*green*/
+  color: rgba(181, 43, 53, 1.00); /*red*/
 }
 
 nav > .sign-up {
-  color: rgba(181, 43, 53, 1.00); /*red*/
+  color: rgba(209, 219, 47, 1.00); /*green*/
 }
 
 /******************** FORMS ************************/
@@ -116,6 +116,10 @@ form {
   padding: 50px;
 }
 
+form.new-user {
+  padding-top: 15px;
+}
+
 
  /****************  SIGN UP & EDIT PROFILE ********************************/
 
@@ -160,6 +164,10 @@ input.search {
   color: rgba(209, 219, 47, 1.00); /*green*/
 }
 
+.tech-slash {
+  color: rgba(79, 123, 185, 1.00); /*bluegrey*/
+}
+
 /****************** TABLES e.g. all users ***************************/
 
 .table-header {
@@ -181,7 +189,7 @@ td.admin {
   background-image: url(/assets/bg_server_detail.jpg);
   background-size: cover;
   background-attachment: fixed;
-  height: 100vh;
+  height: 105vh;
 }
 
 /***************************************************/
@@ -217,7 +225,7 @@ a.clear-search {
   color: rgba(251, 251, 245, 1);
   /*color: white;*/
   text-decoration: none;
-  padding: 0 20px;
+  padding: 0 10px;
   font-size: 50px;
   vertical-align: bottom;
   line-height: 49px;
@@ -277,6 +285,10 @@ a.clear-search {
 
 .fix-list {
   color: rgba(209, 219, 47, 1.00); /*green*/
+}
+
+.tech-list {
+  color: rgba(79, 123, 185, 1.00); /*bluegrey*/
 }
 
 .all-list li a {
