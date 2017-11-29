@@ -1,33 +1,44 @@
 <!-- TECH SHOW SINGLE -->
-<h2><%= @technology.name %></h2>
-<h2>REFERENCE:</h2>
+<div class="show-container">
+  <h2 class="tech-slash">TECHNOLOGY: <%= @technology.name %></h2>
+  <br>
+</div>
 
-<% if @technology.links.present? %>
-  <%= markdown( @technology.links ) %>
-<% end %>
+<div class="lower-container">
+  <div class="inner-bound">
 
-<%= render partial: "pin" %>
+    <h2>REFERENCE:</h2>
 
-<p class="updated-time">Last updated <%= time_ago_in_words @technology.updated_at %> ago</p>
+    <% if @technology.links.present? %>
+      <%= markdown( @technology.links ) %>
+    <% end %>
+
+    <p class="updated-time">Last updated <%= time_ago_in_words @technology.updated_at %> ago</p>
 
 
-<h3>This tech has these issues:</h3>
-<ul>
-  <% @technology.issues.each do |i| %>
-    <li>
-      <%= link_to i.summary, issue_path(i) %>
-    </li>
-  <% end %>
-</ul>
+    <h3>This tech has these issues:</h3>
+    <ul class="all-list issue-list">
+      <% @technology.issues.each do |i| %>
+        <li>
+          <%= link_to i.summary, issue_path(i) %>
+        </li>
+      <% end %>
+    </ul>
 
-<h3>This tech has these fixes:</h3>
-<ul>
-  <% @technology.fixes.each do |f| %>
-    <li>
-      <%= link_to f.title, fix_path(f) %>
-    </li>
-  <% end %>
-</ul>
+    <h3>This tech has these fixes:</h3>
+    <ul class="all-list fix-list">
+      <% @technology.fixes.each do |f| %>
+        <li>
+          <%= link_to f.title, fix_path(f) %>
+        </li>
+      <% end %>
+    </ul>
 
-<!-- ADMIN CONTROLS -->
-<%= render partial: "shared/admin_ctrl" %>
+    <!-- ADMIN CONTROLS -->
+    <%= render partial: "shared/admin_ctrl" %>
+
+  </div>
+  <div class="pin-controls" id="pin-update-t">
+    <%= render partial: "pin" %>
+  </div>
+</div>

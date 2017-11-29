@@ -3,7 +3,7 @@ class FavoriteTechnologiesController < ApplicationController
 
   def create
     if Favorite.create(favorited: @technology, user: @current_user)
-      redirect_to @technology
+    redirect_to technology_path(@technology.id, anchor: "pin-update-t")
     else
       redirect_to @technology, alert: "Sorry, I can't pin that for you."
     end
@@ -11,7 +11,7 @@ class FavoriteTechnologiesController < ApplicationController
 
   def destroy
     Favorite.where(favorited_id: @technology.id, user_id: @current_user.id).first.destroy
-    redirect_to @technology
+    redirect_to technology_path(@technology.id, anchor: "pin-update-t")
   end
 
   private

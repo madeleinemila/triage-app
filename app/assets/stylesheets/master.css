@@ -212,7 +212,7 @@ td.admin {
   background-image: url(https://res.cloudinary.com/mrmy/image/upload/v1511939929/bg_server_detail_ze0sbq.jpg);
   background-size: cover;
   background-attachment: fixed;
-  height: 105vh;
+  height: 101vh;
 }
 
 /***************************************************/
@@ -280,7 +280,7 @@ a.clear-search {
 
 .lower-container {
   background-color: white;
-  min-height: 600px;
+  min-height: 450px;
 }
 
 .inner-bound {
@@ -335,9 +335,10 @@ a.clear-search {
 }
 
 .pin-controls {
-  background-color: black;
+  background-color: rgba(79, 123, 185, 0.5); /*bluegrey*/
   background-image: url(https://res.cloudinary.com/mrmy/image/upload/v1511939929/bg_server_detail_ze0sbq.jpg);
-  /*border-radius: 5px;*/
+  background-size: cover;
+  background-blend-mode: screen;
   height: 70px;
 }
 
@@ -367,8 +368,14 @@ a.pin-fix {
   color: rgba(209, 219, 47, 1.00); /*green*/
 }
 
+a.pin-tech {
+  color: rgba(209, 219, 47, 1.00); /*green*/
+}
+
 a.pin:hover {
   color: rgba(251, 251, 245, 0.9); /*offwhite*/
+  /*text-decoration: underline;*/
+  /*color: rgba(181, 43, 53, 1.00); /*red*/
 }
 
 .rounded {
