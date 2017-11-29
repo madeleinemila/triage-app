@@ -4,8 +4,9 @@ class IssuesController < ApplicationController
   def index
     if params[:term]
       @issues = Issue.search_by_summary_and_det(params[:term])
-    else
-      @issues = {}
+      if @issues == []
+        flash[:notice] = "No results found"
+      end
     end
     @issues_all = Issue.all
     @search = { :path => issues_path, :type => "Got a particular issue?  Search by issue and get a link to all the possible solutions.", :class => "issue-slash"  }

@@ -9,6 +9,9 @@
         <%= link_to t.name, technology_path(t.id) %>
       </li>
     <% end %>
+    <% if flash[:notice] && !@technologies.any? %>
+      <li><%= flash[:notice] %></li>
+    <% end %>
   </ul>
 <% end %>
 

@@ -10,6 +10,9 @@
         <%= link_to i.summary, issue_path(i.id) %>
       </li>
     <% end %>
+    <% if flash[:notice] && !@issues.any? %>
+      <li><%= flash[:notice] %></li>
+    <% end %>
   </ul>
 <% end %>
 

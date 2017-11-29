@@ -1,5 +1,5 @@
 <div class="form-inner-bound">
-  <h2 class="user-form-heading">Edit Profile</h2>
+  <p class="user-form-heading">EDIT PROFILE</p>
 
   <div class="user-info">
     <%= form_for @user do |f| %>
@@ -16,13 +16,13 @@
         <%= f.submit "Update profile" %>
       </fieldset>
     <% end %>
-  </div>
+    <p class="user-form-heading notice">
+        <% if @user.errors.any? %>
+          Please try again:
+          <%=  @user.errors.full_messages.join(', ').downcase %>
+        <% end %>&nbsp;
+    </p>
 
-  <% if @user.errors.any? %>
-    <p>Sorry, please try again:</p>
-    <% @user.errors.full_messages.each do |msg| %>
-    <p><%= msg %></p>
-    <% end %>
-  <% end %>
+  </div>
 
 </div>

@@ -116,6 +116,7 @@ input, textarea {
 input[type="submit"] {
   background-color: white;
   padding: 15px;
+  padding-top: 13px;
 }
 
 .checkboxes {
@@ -158,10 +159,19 @@ form.new-user {
 
 .new-user-info input {
   display: block;
-  margin: 10px 0 10px 0;
   box-sizing: border-box; /* TODO prefixes */
+  margin: 10px 0 10px 0;
   width: 400px;
+  height: 54px;
   font-size: 14px;
+}
+
+.new-user-info input:focus {
+    border: 6px solid rgba(181, 43, 53, 1.00); /*red*/
+}
+
+.user-info input:focus {
+    border: 6px solid rgba(181, 43, 53, 1.00); /*red*/
 }
 
 .new_user {
@@ -175,11 +185,16 @@ form.new-user {
 
 .user-form-heading {
   padding-left: 50px;
-  padding-top: 40px;
+  padding-top: 25px;
 }
 
 .field_with_errors > input {
-  border: 3px solid rgba(181, 43, 53, 1.00); /*red*/
+  border: 6px solid rgba(181, 43, 53, 1.00); /*red*/
+}
+
+.notice {
+  padding-bottom: 25px;
+  padding-top: 0;
 }
 
 /******************** SEARCH ******************/
@@ -210,6 +225,8 @@ input.search {
 .tech-slash {
   color: rgba(79, 123, 185, 1.00); /*bluegrey*/
 }
+
+
 
 /****************** TABLES e.g. all users ***************************/
 
@@ -265,6 +282,14 @@ td.admin {
   transform: rotate(-10deg);
 }
 
+/*.fa-search {
+  color: rgba(251, 251, 245, 1);
+}*/
+
+/*.fa-search:hover, .fa-search:focus {
+    color: rgba(181, 43, 53, 1.00);
+}*/
+
 a.clear-search {
   color: rgba(251, 251, 245, 1);
   /*color: white;*/
@@ -280,6 +305,18 @@ a.clear-search {
 
 a.clear-search:hover, a.clear-search:focus {
   color: rgba(181, 43, 53, 1.00); /*red*/
+}
+
+a.x-issue-slash:hover {
+  color: rgba(248, 146, 45, 1.00); /*orange*/
+}
+
+a.x-fix-slash:hover {
+  color: rgba(209, 219, 47, 1.00); /*green*/
+}
+
+a.x-tech-slash:hover {
+  color: rgba(79, 123, 185, 1.00); /*bluegrey*/
 }
 
 .god-results {

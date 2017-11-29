@@ -6,6 +6,6 @@
     <%= button_tag(type: 'submit', class: "btn submit", id: 'mag-glass-main') do %>
       <%= image_tag 'mag-white.png', class: "mag" %>
     <% end %>
-    <%= link_to 'X', @search[:path], class: "clear-search" %>
+    <%= link_to 'X', @search[:path], class: "clear-search x-#{@search[:class]}" %>
   <% end %>
 </div>

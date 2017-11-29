@@ -6,6 +6,7 @@
     <span class="slash">/</span>
     <!-- <%= submit_tag "Search Triage" %> -->
     <%= button_tag(type: 'submit', class: "btn submit", id: 'mag-glass-main') do %>
+      <!-- <i class="fa fa-search fa-3x fa-flip-horizontal" aria-hidden="true"></i> -->
       <%= image_tag 'mag-white.png', class: "mag" %>
     <% end %>
     <%= link_to 'X', '/', class: "clear-search" %>
@@ -16,7 +17,7 @@
       <% @results.each do |r| %>
         <li><%= link_to r.content, r.searchable, class: "green-hover" %></li>
       <% end %>
-      <% if flash[:notice] %>
+      <% if flash[:notice] && !@results.any? %>
         <li><%= flash[:notice] %></li>
       <% end %>
     </ul>

@@ -4,8 +4,9 @@ class FixesController < ApplicationController
   def index
     if params[:term]
       @fixes = Fix.search_by_title_and_steps(params[:term])
-    else
-      @fixes = {}
+      if @fixes == []
+        flash[:notice] = "No results found"
+      end
     end
     @fixes_all = Fix.all
     @search = { :path => fixes_path, :type => "Search a list of all fix procedures here", :class => "fix-slash"  }

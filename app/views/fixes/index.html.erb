@@ -9,6 +9,9 @@
         <%= link_to f.title, fix_path(f.id) %>
       </li>
     <% end %>
+    <% if flash[:notice] && !@fixes.any? %>
+      <li><%= flash[:notice] %></li>
+    <% end %>
   </ul>
 <% end %>
 
