@@ -1,26 +1,41 @@
 <!-- FIX SHOW SINGLE -->
-<h2>FIX:</h2>
-<h2><%= @fix.title %></h2>
-<p><%= markdown( @fix.steps ) unless @fix.steps.nil? %></p>
-
-<%= render partial: "pin" %>
-
-<p class="updated-time">Last updated <%= time_ago_in_words @fix.updated_at %> ago</p>
-
-<h3>This fix relates to:</h3>
-<ul>
-  <% @fix.issues.each do |i| %>
-    <li><%= link_to i.summary, issue_path(i.id) %></li>
-  <% end %>
-</ul>
-
-<h3>This fix involves:</h3>
-<ul>
-  <% @fix.technologies.each do |t| %>
-    <li><%= link_to t.name, technology_path(t.id) %></li>
-  <% end %>
-</ul>
+<div class="show-container">
+  <h2 class="fix-slash">FIX: <%= @fix.title %></h2>
+  <p class="updated-time">Last updated <%= time_ago_in_words @fix.updated_at %> ago</p>
+</div>
 
 
-<!-- ADMIN CONTROLS -->
-<%= render partial: "shared/admin_ctrl" %>
+<div class="lower-container">
+    <div class="md">
+      <h3>PROCEDURE</h3>
+      <%= markdown( @fix.steps ) unless @fix.steps.nil? %>
+    </div>
+
+  <div class="inner-bound">
+
+
+
+    <h3>This fix relates to:</h3>
+    <ul class="all-list fix-list">
+      <% @fix.issues.each do |i| %>
+        <li><%= link_to i.summary, issue_path(i.id) %></li>
+      <% end %>
+    </ul>
+
+    <h3>This fix involves the following tech:</h3>
+    <ul class="all-list tech-list">
+      <% @fix.technologies.each do |t| %>
+        <li><%= link_to t.name, technology_path(t.id) %></li>
+      <% end %>
+    </ul>
+
+
+
+    <!-- ADMIN CONTROLS -->
+    <%= render partial: "shared/admin_ctrl" %>
+
+  </div>
+  <div class="pin-controls" id="pin-update-f">
+    <%= render partial: "pin" %>
+  </div>
+</div>

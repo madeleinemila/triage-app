@@ -3,7 +3,7 @@ class FavoriteFixesController < ApplicationController
 
   def create
     if Favorite.create(favorited: @fix, user: @current_user)
-      redirect_to @fix
+    redirect_to fix_path(@fix.id, anchor: "pin-update-f")
     else
       redirect_to @fix, alert: "Sorry, I can't pin that for you."
     end
@@ -11,7 +11,7 @@ class FavoriteFixesController < ApplicationController
 
   def destroy
     Favorite.where(favorited_id: @fix.id, user_id: @current_user.id).first.destroy
-    redirect_to @fix
+    redirect_to fix_path(@fix.id, anchor: "pin-update-f")
   end
 
   private

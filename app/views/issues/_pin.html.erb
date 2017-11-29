@@ -3,7 +3,7 @@
     <p class="pin-status">&nbsp;</p>
     <%= link_to 'Add to pins', favorite_issues_path(issue_id: @issue), method: :post, :class => "pin pin-issue" %>
   <% else %>
-    <p class="pin-status">PINNED</p>
+    <p class="pin-status">ISSUE PINNED</p>
     <%= link_to 'Remove from pins', favorite_issue_path(@issue), method: :delete, :class => "pin pin-issue"  %>
   <% end %>
 <% end %>

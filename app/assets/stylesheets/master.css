@@ -321,9 +321,11 @@ a.clear-search {
 }
 
 .md {
-  background-color: red;
-  border-radius: 5px;
-  min-height: 100px;
+  /*background-color: red;*/
+  border-top: 10px solid rgba(209, 219, 47, 1.00); /*green*/
+  /*border-radius: 5px;*/
+  padding: 15px;
+  min-height: 350px;
 }
 
 .updated-time {
@@ -335,7 +337,7 @@ a.clear-search {
 .pin-controls {
   background-color: black;
   background-image: url(https://res.cloudinary.com/mrmy/image/upload/v1511939929/bg_server_detail_ze0sbq.jpg);
-  border-radius: 5px;
+  /*border-radius: 5px;*/
   height: 70px;
 }
 
@@ -361,10 +363,17 @@ a.pin-issue {
     color: rgba(248, 146, 45, 1.00); /*orange*/
 }
 
+a.pin-fix {
+  color: rgba(209, 219, 47, 1.00); /*green*/
+}
+
 a.pin:hover {
   color: rgba(251, 251, 245, 0.9); /*offwhite*/
 }
 
+.rounded {
+  border-radius: 5px;
+}
 
 /****************** Focus *****************/
 input:focus, textarea:focus {
