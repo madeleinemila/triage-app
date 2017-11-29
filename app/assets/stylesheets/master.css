@@ -58,11 +58,15 @@ nav > a:hover {
 
 nav > .current-user {
   font-size: 12px;
-  color: rgba(181, 43, 53, 1.00); /*red*/
+  color: rgba(209, 219, 47, 1.00); /*green*/
 }
 
 nav > .sign-up {
   color: rgba(209, 219, 47, 1.00); /*green*/
+}
+
+nav > .login {
+  color: rgba(181, 43, 53, 1.00); /*red*/
 }
 
 /******************** FORMS ************************/
@@ -306,4 +310,17 @@ input:focus, textarea:focus {
 button:focus {
     outline: none;
     color: rgba(181, 43, 53, 1.00); /*red*/
+}
+
+/******** PINS GRID *****************/
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.grid-box {
+  background-color: red;
+  height: 60px;
 }
