@@ -38,6 +38,16 @@ h2 {
     font-weight: bold;
     letter-spacing: -0.5px;
 }
+
+h4 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.2em;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: -0.5px;
+}
+
 /******************** NAV **************************/
 
 nav {
@@ -318,9 +328,16 @@ button:focus {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 20px;
+  padding: 30px 0;
 }
 
 .grid-box {
-  background-color: red;
+  /*background-color: red;*/
   height: 60px;
+  padding: 30px 0;
+  color: rgba(15, 15, 15, 1.00);
+}
+
+.grid-container > a {
+  text-decoration: none;
 }

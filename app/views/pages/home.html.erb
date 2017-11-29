@@ -28,19 +28,28 @@
 
         <% @current_user.favorite_issues.each do |fi| %>
           <%= link_to issue_path(fi) do %>
-            <div class="grid-box">/ ISSUE<br><%= fi.summary %></div>
+            <div class="grid-box">
+              <h4><span class="issue-slash">/</span> ISSUE</h4>
+              <p><%= fi.summary %></p>
+            </div>
           <% end %>
         <% end %>
 
         <% @current_user.favorite_fixes.each do |ff| %>
           <%= link_to fix_path(ff) do %>
-            <div class="grid-box">/ FIX<br><%= ff.title %></div>
+            <div class="grid-box">
+              <h4><span class="fix-slash">/</span> FIX</h4>
+              <p><%= ff.title %></p>
+            </div>
           <% end %>
         <% end %>
 
         <% @current_user.favorite_technologies.each do |ft| %>
           <%= link_to technology_path(ft) do %>
-            <div class="grid-box">/ TECH<br><%= ft.name %></div>
+            <div class="grid-box">
+              <h4><span class="tech-slash">/</span> TECH</h4>
+              <p><%= ft.name %></p>
+            </div>
           <% end %>
         <% end %>
       </div> <!-- end grid-container -->
