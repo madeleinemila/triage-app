@@ -7,7 +7,7 @@ class FixesController < ApplicationController
     else
       @fixes = Fix.all
     end
-    @search = { :path => fixes_path, :type => "Fixes"  }
+    @search = { :path => fixes_path, :type => "fixes"  }
   end
 
   def new

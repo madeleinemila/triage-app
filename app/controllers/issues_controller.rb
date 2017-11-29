@@ -7,7 +7,7 @@ class IssuesController < ApplicationController
     else
       @issues = Issue.all
     end
-    @search = { :path => issues_path, :type => "Issues"  }
+    @search = { :path => issues_path, :type => "issue"  }
   end
 
   def new

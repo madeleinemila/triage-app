@@ -1,5 +1,11 @@
-<%= form_tag(@search[:path], method: :get) do %>
-  <%= text_field_tag 'term', params[:term], placeholder: 'What can I help you find?', class: "search sentence" %>
-  <%= submit_tag "Search #{@search[:type]}" %>
-<% end %>
-<%= link_to 'Clear Search', @search[:path] %>
+<div class="large-search">
+  <%= form_tag(@search[:path], method: :get) do %>
+    <%= text_field_tag 'term', params[:term], placeholder: "Search by #{@search[:type]} here", class: "search sentence" %>
+    <span class="slash">/</span>
+    <!-- <%= submit_tag "Search #{@search[:type]}" %> -->
+    <%= button_tag(type: 'submit', class: "btn submit", id: 'mag-glass-main') do %>
+      <%= image_tag 'mag-white.png', class: "mag" %>
+    <% end %>
+    <%= link_to 'X', @search[:path], class: "clear-search" %>
+  <% end %>
+</div>
