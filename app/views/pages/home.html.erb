@@ -9,12 +9,12 @@
     <%= button_tag(type: 'submit', class: "btn submit", id: 'mag-glass-main') do %>
       <%= image_tag 'mag-white.png', class: "mag" %>
     <% end %>
+    <%= link_to 'X', '/', class: "clear-search" %>
   <% end %>
-  <%= link_to 'Clear Search', '/' %>
 
-  <ul>
+  <ul class="god-results">
     <% @results.each do |r| %>
-      <li><%= link_to r.content, r.searchable %></li>
+      <li><%= link_to r.content, r.searchable, class: "green-hover" %></li>
     <% end %>
   </ul>
   <!-- end search -->
