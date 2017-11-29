@@ -208,6 +208,7 @@ td.admin {
 /*******************************/
 
 .container {
+  background-color: black; /*fallback*/
   background-image: url(https://res.cloudinary.com/mrmy/image/upload/v1511939929/bg_server_detail_ze0sbq.jpg);
   background-size: cover;
   background-attachment: fixed;
@@ -290,6 +291,7 @@ a.clear-search {
 
 .all-list li {
   padding: 5px;
+  padding-bottom: 30px;
   list-style-type: none;
 }
 
@@ -323,6 +325,46 @@ a.clear-search {
   border-radius: 5px;
   min-height: 100px;
 }
+
+.updated-time {
+  color: rgba(251, 251, 245, 0.9); /*offwhite*/
+  font-size: 11px;
+  padding-bottom: 15px;
+}
+
+.pin-controls {
+  background-color: black;
+  background-image: url(https://res.cloudinary.com/mrmy/image/upload/v1511939929/bg_server_detail_ze0sbq.jpg);
+  border-radius: 5px;
+  height: 70px;
+}
+
+p.pin-status {
+  color: rgba(251, 251, 245, 0.9); /*offwhite*/
+  display: inline-block;
+  font-weight: bold;
+  font-size: 20px;
+  margin-left: 50px;
+}
+
+.pin-controls > a {
+  color: rgba(251, 251, 245, 0.9); /*offwhite*/
+  float: right;
+  margin-right: 50px;
+  line-height: 70px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 19px;
+}
+
+a.pin-issue {
+    color: rgba(248, 146, 45, 1.00); /*orange*/
+}
+
+a.pin:hover {
+  color: rgba(251, 251, 245, 0.9); /*offwhite*/
+}
+
 
 /****************** Focus *****************/
 input:focus, textarea:focus {

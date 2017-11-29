@@ -2,14 +2,15 @@
 <div class="show-container">
   <h2 class="issue-slash">ISSUE: <%= @issue.summary %></h2>
   <p>FURTHER DETAILS<br><%= markdown( @issue.details ) unless @issue.details.nil? %></p>
+  <p class="updated-time">Last updated <%= time_ago_in_words @issue.updated_at %> ago</p>
 </div>
 
 
 <div class="lower-container">
   <div class="inner-bound">
 
-    <h2>FIX:</h2>
-    <ul>
+    <h2>FIXES:</h2>
+    <ul class="all-list fix-list">
     <% @issue.fixes.each do |f| %>
       <li>
         <%= link_to f.title, fix_path(f.id) %>
@@ -17,18 +18,20 @@
     <% end %>
     </ul>
 
-    <%= render partial: "pin" %>
+    <% if @issue.technologies.any? %>
+      <h3>This issue involves the following tech:</h3>
+      <ul class="all-list tech-list">
+        <% @issue.technologies.each do |t| %>
+          <li>
+            <%= link_to t.name, technology_path(t) %>
+          </li>
+        <% end %>
+      </ul>
+    <% end %>
 
-    <p class="updated-time">Last updated <%= time_ago_in_words @issue.updated_at %> ago</p>
-
-    <h3>This issue involves:</h3>
-    <ul>
-      <% @issue.technologies.each do |t| %>
-        <li>
-          <%= link_to t.name, technology_path(t) %>
-        </li>
-      <% end %>
-    </ul>
+    <div class="pin-controls">
+      <%= render partial: "pin" %>
+    </div>
 
     <!-- ADMIN CONTROLS -->
     <%= render partial: "shared/admin_ctrl" %>
