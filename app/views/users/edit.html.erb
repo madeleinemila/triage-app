@@ -1,26 +1,28 @@
-<h2>Edit Profile</h2>
+<div class="form-inner-bound">
+  <h2 class="user-form-heading">Edit Profile</h2>
 
-<div class="user-info">
-  <%= form_for @user do |f| %>
-    <fieldset>
-      <%= f.label :name %>
-      <%= f.text_field :name, :autofocus => true %>
-    </fieldset>
-    <fieldset>
-      <%= f.label :email %>
-      <%= f.email_field :email %>
-    </fieldset>
-    <fieldset>
-      <label></label>
-      <%= f.submit "Update profile" %>
-    </fieldset>
+  <div class="user-info">
+    <%= form_for @user do |f| %>
+      <fieldset>
+        <%= f.label :name %>
+        <%= f.text_field :name, :autofocus => true %>
+      </fieldset>
+      <fieldset>
+        <%= f.label :email %>
+        <%= f.email_field :email %>
+      </fieldset>
+      <fieldset>
+        <label></label>
+        <%= f.submit "Update profile" %>
+      </fieldset>
+    <% end %>
+  </div>
+
+  <% if @user.errors.any? %>
+    <p>Sorry, please try again:</p>
+    <% @user.errors.full_messages.each do |msg| %>
+    <p><%= msg %></p>
+    <% end %>
   <% end %>
+
 </div>
-
-<%# TODO make these partials %>
-<% if @user.errors.any? %>
-  <p>Sorry, please try again:</p>
-  <% @user.errors.full_messages.each do |msg| %>
-  <p><%= msg %></p>
-  <% end %>
-<% end %>

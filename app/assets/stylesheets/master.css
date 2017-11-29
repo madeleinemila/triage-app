@@ -129,6 +129,7 @@ input[type="submit"] {
 }
 
 .form-inner-bound {
+  background-color: rgba(0, 0, 0, 0.5);
   color: white;
   max-width: 960px;
   margin: 0 auto;
@@ -155,6 +156,11 @@ form.new-user {
 
 .user-info label {
   width: 400px;
+}
+
+.user-form-heading {
+  padding-left: 50px;
+  padding-top: 40px;
 }
 
 .field_with_errors > input {
@@ -254,6 +260,11 @@ a.clear-search {
   line-height: 49px;
   font-weight: bold;
   font-family: 'Nunito', sans-serif;
+  outline: 0;
+}
+
+a.clear-search:hover, a.clear-search:focus {
+  color: rgba(181, 43, 53, 1.00); /*red*/
 }
 
 .god-results {
@@ -265,6 +276,8 @@ a.clear-search {
 
 .god-results li {
   padding: 10px;
+  color: white;
+  list-style-type: none;
 }
 
 .god-results a {
@@ -281,6 +294,10 @@ a.clear-search {
 .lower-container {
   background-color: white;
   min-height: 450px;
+}
+
+.no-user {
+  background-color: rgba(0, 0, 0, 0)
 }
 
 .inner-bound {
@@ -405,9 +422,14 @@ button:focus {
 
 .grid-box {
   /*background-color: red;*/
+  /*box-sizing: border-box;*/
   height: 60px;
-  padding: 30px 0;
+  padding: 30px 0px 30px 20px;
   color: rgba(15, 15, 15, 1.00);
+}
+
+.grid-heading {
+  padding-left: 20px;
 }
 
 .grid-container > a {

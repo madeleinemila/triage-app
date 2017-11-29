@@ -11,11 +11,17 @@
     <%= link_to 'X', '/', class: "clear-search" %>
   <% end %>
 
-  <ul class="god-results">
-    <% @results.each do |r| %>
-      <li><%= link_to r.content, r.searchable, class: "green-hover" %></li>
-    <% end %>
-  </ul>
+  <% if params[:term] %>
+    <ul class="god-results">
+      <% @results.each do |r| %>
+        <li><%= link_to r.content, r.searchable, class: "green-hover" %></li>
+      <% end %>
+      <% if flash[:notice] %>
+        <li><%= flash[:notice] %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
 </div>
 <!-- end multi search -->
 <% if session[:user_id].present? %>
@@ -23,7 +29,7 @@
     <div class="inner-bound">
 
 
-      <h2>YOUR PINS</h2>
+      <h2 class="grid-heading">YOUR PINS</h2>
       <div class="grid-container">
 
         <% @current_user.favorite_issues.each do |fi| %>
@@ -56,5 +62,8 @@
 
 
     </div>
+  </div>
+<% else %>
+  <div class="lower-container no-user">
   </div>
 <% end %>
