@@ -11,22 +11,11 @@ body {
 h1 {
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 400;
-  color: rgba(251, 251, 245, 1.0);
+  color: rgba(251, 251, 245, 1.0); /*offwhite*/
   font-size: 80px;
   padding: 0 10px;
   display: block;
   position: relative;
-}
-
-.slash {
-    font-size: 58px;
-    font-family: 'Nunito', sans-serif;
-    font-weight: bold;
-    font-style: italic;
-    color: rgba(181, 43, 53, 1.00);
-    vertical-align: bottom;
-    line-height: 49px;
-    padding: 0px 14px;
 }
 
 h1::after {
@@ -36,7 +25,7 @@ h1::after {
   display: inline-block;
   height: 1em;
   width: 100%;
-  border-bottom: 1px solid;
+  border-bottom: 1px solid rgba(251, 251, 245, 0.9); /*offwhite*/
   margin-top: -20px;
 }
 
@@ -44,15 +33,27 @@ h1::after {
 
 nav {
   padding: 1em;
+  text-align: right;
 }
 
 nav > a {
   padding: 1em;
   font-size: 12px;
+  color: rgba(251, 251, 245, 0.9); /*offwhite*/
+  text-decoration: none;
+}
+
+nav > a:hover {
+  color: rgba(248, 146, 45, 1.00); /*orange*/
 }
 
 nav > .current-user {
   font-size: 12px;
+  color: rgba(209, 219, 47, 1.00); /*green*/
+}
+
+nav > .sign-up {
+  color: rgba(181, 43, 53, 1.00); /*red*/
 }
 
 /******************** FORMS ************************/
@@ -70,6 +71,7 @@ label {
 input, textarea {
   border: 1px #ddd solid;
   font-family: 'Avenir', sans-serif;
+  padding: 15px;
 }
 
 .sentence {
@@ -82,7 +84,7 @@ input, textarea {
 
 input[type="submit"] {
   background-color: white;
-  padding: 10px;
+  padding: 15px;
 }
 
 .checkboxes {
@@ -95,6 +97,11 @@ input[type="submit"] {
   list-style-type: none;
 }
 
+.form-inner-bound {
+  color: white;
+  max-width: 960px;
+  margin: 0 auto;
+}
 
 
  /****************  SIGN UP & EDIT PROFILE ********************************/
@@ -104,7 +111,7 @@ input[type="submit"] {
   margin: 1em 0 1em 0;
   box-sizing: border-box; /* TODO prefixes */
   width: 400px;
-  height: 40px;
+  height: 54px;
 }
 
 .user-info label {
@@ -112,13 +119,24 @@ input[type="submit"] {
 }
 
 .field_with_errors > input {
-  border: 3px solid red;
+  border: 3px solid rgba(181, 43, 53, 1.00); /*red*/
 }
 
 /******************** SEARCH ******************/
 
 input.search {
   padding: 15px;
+}
+
+.slash {
+    font-size: 58px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    color: rgba(181, 43, 53, 1.00); /*red*/
+    vertical-align: bottom;
+    line-height: 49px;
+    padding: 0px 14px;
 }
 
 /****************** TABLES e.g. all users ***************************/
@@ -141,6 +159,8 @@ td.admin {
 .container {
   background-image: url(/assets/bg_server_detail.jpg);
   background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
 }
 
 /***************************************************/
@@ -173,8 +193,8 @@ td.admin {
 }
 
 a.clear-search {
-  /*color: rgba(251, 251, 245, 1.0);*/
-  color: white;
+  color: rgba(251, 251, 245, 0.9);
+  /*color: white;*/
   text-decoration: none;
   padding: 0 20px;
   font-size: 50px;
@@ -197,6 +217,18 @@ a.clear-search {
   color: rgba(209, 219, 47, 1.00); /*green*/
 }
 
+/********* PINS ***************************/
+
+.pins-container {
+  background-color: white;
+}
+
+.pins-inner-bound {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2em 10px;
+}
+
 /****************** Focus *****************/
 input:focus, textarea:focus {
     outline: none;
@@ -206,5 +238,5 @@ input:focus, textarea:focus {
 
 button:focus {
     outline: none;
-    color: red;
+    color: rgba(181, 43, 53, 1.00); /*red*/
 }

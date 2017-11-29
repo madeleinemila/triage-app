@@ -1,7 +1,6 @@
 
-
+<!-- MULTI SEARCH -->
 <div class="large-search">
-  <!-- MULTI SEARCH -->
   <%= form_tag('/', method: :get) do %>
     <%= text_field_tag 'term', params[:term], placeholder: 'What can I help you find?', class: "search" %>
     <span class="slash">/</span>
@@ -17,22 +16,24 @@
       <li><%= link_to r.content, r.searchable, class: "green-hover" %></li>
     <% end %>
   </ul>
-  <!-- end search -->
 </div>
-
+<!-- end multi search -->
 <% if session[:user_id].present? %>
+  <div class="pins-container">
+    <div class="pins-inner-bound">
 
-  <p>Welcome <%= @current_user.name %></p>
-  <h2>PINS</h2>
 
-  <% @current_user.favorite_issues.each do |fi| %>
-    <p>[issue] <%= link_to fi.summary, issue_path(fi) %></p>
-  <% end %>
-  <% @current_user.favorite_fixes.each do |ff| %>
-    <p>[fix] <%= link_to ff.title, fix_path(ff) %></p>
-  <% end %>
-  <% @current_user.favorite_technologies.each do |ft| %>
-    <p>[tech] <%= link_to ft.name, technology_path(ft) %></p>
-  <% end %>
+      <h2>YOUR PINS</h2>
 
+      <% @current_user.favorite_issues.each do |fi| %>
+        <p>[issue] <%= link_to fi.summary, issue_path(fi) %></p>
+      <% end %>
+      <% @current_user.favorite_fixes.each do |ff| %>
+        <p>[fix] <%= link_to ff.title, fix_path(ff) %></p>
+      <% end %>
+      <% @current_user.favorite_technologies.each do |ft| %>
+        <p>[tech] <%= link_to ft.name, technology_path(ft) %></p>
+      <% end %>
+    </div>
+  </div>
 <% end %>

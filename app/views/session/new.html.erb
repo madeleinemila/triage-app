@@ -1,28 +1,31 @@
-<h2>Login</h2>
+<div class="form-inner-bound">
+  <p>Please login using your email address and password</p>
 
-<div class="user-info">
-  <%= form_tag login_path do %>
-  <% if flash[:error] %>
-    <fieldset class="field_with_errors" >
-  <% else %>
-    <fieldset>
-  <% end %>
-      <%= label_tag :email %>
-      <%= email_field_tag :email, nil, :autofocus => true %>
-    </fieldset>
-  <% if flash[:error] %>
-    <fieldset class="field_with_errors" >
-  <% else %>
-    <fieldset>
-  <% end %>
-      <%= label_tag :password %>
-      <%= password_field_tag :password %>
-    </fieldset>
-    <fieldset>
-      <label></label>
-      <%= submit_tag "Login" %>
-    </fieldset>
-  <% end %>
+  <div class="user-info">
+    <%= form_tag login_path do %>
+    <% if flash[:error] %>
+      <fieldset class="field_with_errors" >
+    <% else %>
+      <fieldset>
+    <% end %>
+        <%= label_tag :email %>
+        <%= email_field_tag :email, nil, :autofocus => true %>
+      </fieldset>
+    <% if flash[:error] %>
+      <fieldset class="field_with_errors" >
+    <% else %>
+      <fieldset>
+    <% end %>
+        <%= label_tag :password %>
+        <%= password_field_tag :password %>
+      </fieldset>
+      <fieldset>
+        <label></label>
+        <%= submit_tag "Login" %>
+      </fieldset>
+    <% end %>
+  </div>
+
+  <p><%= flash[:error] %>&nbsp;</p>
+
 </div>
-
-<p><%= flash[:error] %>&nbsp;</p>

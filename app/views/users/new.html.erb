@@ -1,33 +1,36 @@
-<h2>Create an account</h2>
+<div class="form-inner-bound">
+    <h2>Create an account</h2>
 
-<div class="user-info">
-  <%= form_for @user do |f| %>
-    <fieldset>
-          <%= f.label :name %>
-          <%= f.text_field :name, :autofocus => true %>
-    </fieldset>
-    <fieldset>
-          <%= f.label :email %>
-          <%= f.email_field :email %>
-    </fieldset>
-    <fieldset>
-          <%= f.label :password %>
-          <%= f.password_field :password %>
-    </fieldset>
-    <fieldset>
-          <%= f.label :password_confirmation, "Retype password" %>
-          <%= f.password_field :password_confirmation %>
-    </fieldset>
-    <fieldset>
-          <label></label>
-          <%= f.submit "Create account" %>
-    </fieldset>
-  <% end %>
+    <div class="user-info">
+      <%= form_for @user do |f| %>
+        <fieldset>
+              <%= f.label :name %>
+              <%= f.text_field :name, :autofocus => true %>
+        </fieldset>
+        <fieldset>
+              <%= f.label :email %>
+              <%= f.email_field :email %>
+        </fieldset>
+        <fieldset>
+              <%= f.label :password %>
+              <%= f.password_field :password %>
+        </fieldset>
+        <fieldset>
+              <%= f.label :password_confirmation, "Retype password" %>
+              <%= f.password_field :password_confirmation %>
+        </fieldset>
+        <fieldset>
+              <label></label>
+              <%= f.submit "Create account" %>
+        </fieldset>
+      <% end %>
+    </div>
+
+    <% if @user.errors.any? %>
+      <p>Sorry, please try again:</p>
+      <% @user.errors.full_messages.each do |msg| %>
+      <p><%= msg %></p>
+      <% end %>
+    <% end %>
+
 </div>
-
-<% if @user.errors.any? %>
-  <p>Sorry, please try again:</p>
-  <% @user.errors.full_messages.each do |msg| %>
-  <p><%= msg %></p>
-  <% end %>
-<% end %>
