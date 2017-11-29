@@ -16,6 +16,7 @@ h1 {
   padding: 0 10px;
   display: block;
   position: relative;
+  letter-spacing: 9px;
 }
 
 h1::after {
@@ -29,6 +30,14 @@ h1::after {
   margin-top: -20px;
 }
 
+h2 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.5em;
+    margin: 0.83em 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: -0.5px;
+}
 /******************** NAV **************************/
 
 nav {
@@ -103,6 +112,10 @@ input[type="submit"] {
   margin: 0 auto;
 }
 
+form {
+  padding: 50px;
+}
+
 
  /****************  SIGN UP & EDIT PROFILE ********************************/
 
@@ -139,6 +152,10 @@ input.search {
     padding: 0px 14px;
 }
 
+.issue-slash {
+    color: rgba(248, 146, 45, 1.00); /*orange*/
+}
+
 /****************** TABLES e.g. all users ***************************/
 
 .table-header {
@@ -171,7 +188,7 @@ td.admin {
 }
 
 #term {
-  width: 700px;
+  width: 600px;
 }
 
 /*.large-search input[type="submit"] {
@@ -193,7 +210,7 @@ td.admin {
 }
 
 a.clear-search {
-  color: rgba(251, 251, 245, 0.9);
+  color: rgba(251, 251, 245, 1);
   /*color: white;*/
   text-decoration: none;
   padding: 0 20px;
@@ -217,16 +234,46 @@ a.clear-search {
   color: rgba(209, 219, 47, 1.00); /*green*/
 }
 
-/********* PINS ***************************/
+/********* LOWER HALF ***************************/
 
-.pins-container {
+.lower-container {
   background-color: white;
+  min-height: 600px;
 }
 
-.pins-inner-bound {
+.inner-bound {
   max-width: 960px;
   margin: 0 auto;
   padding: 2em 10px;
+}
+
+.all-list li {
+  padding: 5px;
+  list-style-type: none;
+}
+
+.issue-list li::before {
+  color: rgba(246, 145, 58, 1.00);
+  /* color of bullet or square */
+
+  content: "\2022";
+  /* Unicode of character to precede the list item */
+
+  font-size: 2em;
+  /* em or %*/
+
+  padding-right: 1.1225em;
+  /* use em*/
+
+  position: relative;
+  top: 5px;
+  /* use em or % */
+
+}
+
+.all-list li a {
+  text-decoration: none;
+  color: rgba(15, 15, 15, 1.00);
 }
 
 /****************** Focus *****************/

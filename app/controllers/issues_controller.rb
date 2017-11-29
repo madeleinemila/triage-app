@@ -5,9 +5,10 @@ class IssuesController < ApplicationController
     if params[:term]
       @issues = Issue.search_by_summary_and_det(params[:term])
     else
-      @issues = Issue.all
+      @issues = {}
     end
-    @search = { :path => issues_path, :type => "issue"  }
+    @issues_all = Issue.all
+    @search = { :path => issues_path, :type => "Got a particular issue?  Search by issue and get a link to all the possible solutions."  }
   end
 
   def new

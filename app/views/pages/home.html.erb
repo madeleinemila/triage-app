@@ -2,7 +2,7 @@
 <!-- MULTI SEARCH -->
 <div class="large-search">
   <%= form_tag('/', method: :get) do %>
-    <%= text_field_tag 'term', params[:term], placeholder: 'What can I help you find?', class: "search" %>
+    <%= text_field_tag 'term', params[:term], placeholder: "Need help?  You can ask me about an issue or a procedure you need to know.", class: "search" %>
     <span class="slash">/</span>
     <!-- <%= submit_tag "Search Triage" %> -->
     <%= button_tag(type: 'submit', class: "btn submit", id: 'mag-glass-main') do %>
@@ -19,8 +19,8 @@
 </div>
 <!-- end multi search -->
 <% if session[:user_id].present? %>
-  <div class="pins-container">
-    <div class="pins-inner-bound">
+  <div class="lower-container">
+    <div class="inner-bound">
 
 
       <h2>YOUR PINS</h2>

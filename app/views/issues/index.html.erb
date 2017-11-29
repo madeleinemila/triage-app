@@ -1,14 +1,28 @@
-<h2>All Issues</h2>
-
 <!-- SEARCH -->
 <%= render partial: "shared/single_search" %>
 <!------>
 
 
-<ul>
-  <% @issues.each do |i| %>
-    <li>
-      <%= link_to i.summary, issue_path(i.id) %>
-    </li>
-  <% end %>
-</ul>
+<% if params[:term] %>
+  <ul class=god-results>
+    <% @issues.each do |i| %>
+      <li>
+        <%= link_to i.summary, issue_path(i.id) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<div class="lower-container">
+  <div class="inner-bound">
+    <h2>All Issues</h2>
+
+    <ul class="all-list issue-list">
+      <% @issues_all.each do |i| %>
+        <li>
+          <%= link_to i.summary, issue_path(i.id) %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>

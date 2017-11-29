@@ -8,7 +8,7 @@ class TechnologiesController < ApplicationController
     else
       @technologies = Technology.all.sort_by { |t| t.name.downcase }
     end
-    @search = { :path => technologies_path, :type => "tech"  }
+    @search = { :path => technologies_path, :type => "Search by technology to get a link to all related fixes and manuals"  }
   end
 
   def new
