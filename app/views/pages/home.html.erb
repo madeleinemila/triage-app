@@ -4,7 +4,11 @@
   <!-- MULTI SEARCH -->
   <%= form_tag('/', method: :get) do %>
     <%= text_field_tag 'term', params[:term], placeholder: 'What can I help you find?', class: "search" %>
-    <%= submit_tag "Search Entire Knowledge Base" %>
+    <span class="slash">/</span>
+    <!-- <%= submit_tag "Search Triage" %> -->
+    <%= button_tag(type: 'submit', class: "btn submit", id: 'mag-glass-main') do %>
+      <%= image_tag 'mag-white.png', class: "mag" %>
+    <% end %>
   <% end %>
   <%= link_to 'Clear Search', '/' %>
 

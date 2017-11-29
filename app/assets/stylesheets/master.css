@@ -18,6 +18,17 @@ h1 {
   position: relative;
 }
 
+.slash {
+    font-size: 58px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    color: rgba(181, 43, 53, 1.00);
+    vertical-align: bottom;
+    line-height: 37px;
+    padding: 0px 14px;
+}
+
 h1::after {
   content: '';
   position: absolute;
@@ -140,4 +151,22 @@ td.admin {
 
 #term {
   width: 700px;
+}
+
+/*.large-search input[type="submit"] {
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  border: none;
+}*/
+
+#mag-glass-main {
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  border: none;
+  vertical-align: middle;
+}
+
+.mag {
+  width: 40px;
+  transform: rotate(-10deg);
 }
