@@ -39,6 +39,14 @@ h2 {
     letter-spacing: -0.5px;
 }
 
+.show-container > * {
+  color: rgba(251, 251, 245, 0.9); /*offwhite*/
+}
+
+.show-container {
+  padding-left: 20px;
+}
+
 h4 {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 1.2em;
@@ -308,6 +316,12 @@ a.clear-search {
 .all-list li a {
   text-decoration: none;
   color: rgba(15, 15, 15, 1.00);
+}
+
+.md {
+  background-color: red;
+  border-radius: 5px;
+  min-height: 100px;
 }
 
 /****************** Focus *****************/
