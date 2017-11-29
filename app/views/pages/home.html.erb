@@ -1,18 +1,20 @@
-<h1>TRIAGE</h1>
 
-<!-- MULTI SEARCH -->
-<%= form_tag('/', method: :get) do %>
-  <%= text_field_tag 'term', params[:term], placeholder: 'What can I help you find?', class: "search sentence" %>
-  <%= submit_tag "Search Entire Knowledge Base" %>
-<% end %>
-<%= link_to 'Clear Search', '/' %>
 
-<ul>
-  <% @results.each do |r| %>
-    <li><%= link_to r.content, r.searchable %></li>
+<div class="large-search">
+  <!-- MULTI SEARCH -->
+  <%= form_tag('/', method: :get) do %>
+    <%= text_field_tag 'term', params[:term], placeholder: 'What can I help you find?', class: "search" %>
+    <%= submit_tag "Search Entire Knowledge Base" %>
   <% end %>
-</ul>
-<!-- end search -->
+  <%= link_to 'Clear Search', '/' %>
+
+  <ul>
+    <% @results.each do |r| %>
+      <li><%= link_to r.content, r.searchable %></li>
+    <% end %>
+  </ul>
+  <!-- end search -->
+</div>
 
 <% if session[:user_id].present? %>
 

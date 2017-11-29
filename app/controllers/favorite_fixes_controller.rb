@@ -16,6 +16,6 @@ class FavoriteFixesController < ApplicationController
 
   private
   def set_fix
-    @fix = Fix.find(params[:fix_id] || params[:id])
+    @fix = Fix.find(params[:fix_id] || params[:id]) # TODO maybe bug
   end
 end

@@ -1,11 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:400,500,600,700,800|Josefin+Sans:400,600,700');
+
 * {
-  /*border: 1px solid pink;*/
+  border: 1px solid pink;
 }
 
 body {
   font-family: Avenir, sans-serif;
-  max-width: 960px;
-  margin: 0 auto;
+}
+
+h1 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
+  color: rgba(251, 251, 245, 1.0);
+  font-size: 80px;
+  padding: 0 10px;
+  display: block;
+  position: relative;
+}
+
+h1::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  height: 1em;
+  width: 100%;
+  border-bottom: 1px solid;
+  margin-top: -20px;
 }
 
 /******************** NAV **************************/
@@ -103,4 +124,20 @@ td.admin {
   width: 100px;
 }
 
+/*******************************/
+
+.container {
+  background-image: url(/assets/bg_server.jpg);
+  background-size: cover;
+}
+
 /***************************************************/
+
+.large-search {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+#term {
+  width: 700px;
+}
