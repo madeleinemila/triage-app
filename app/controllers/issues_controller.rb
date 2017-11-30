@@ -2,12 +2,14 @@ class IssuesController < ApplicationController
   before_action :check_if_admin, :except => [:index, :show]
 
   def index
+    # IF A SEARCH TERM IS PRESENT:
     if params[:term]
       @issues = Issue.search_by_summary_and_det(params[:term])
       if @issues == []
         flash[:notice] = "No results found"
       end
     end
+    # For rest of page:
     @issues_all = Issue.all
     @search = { :path => issues_path, :type => "Got a particular issue?  Search by issue and get a link to all the possible solutions.", :class => "issue-slash"  }
   end

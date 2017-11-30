@@ -18,7 +18,8 @@ class Fix < ApplicationRecord
       tsearch: {
         prefix: true,
         dictionary: "english"
-      }
+      },
+      trigram: {threshold:  0.1}
     }
   multisearchable :against => [:title]
 end

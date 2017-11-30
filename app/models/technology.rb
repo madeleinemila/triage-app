@@ -17,7 +17,8 @@ class Technology < ApplicationRecord
     using: {
       tsearch: {
         prefix: true
-      }
+      },
+      trigram: {}
     }
   multisearchable :against => [:name]
 end

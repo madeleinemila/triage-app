@@ -19,9 +19,9 @@ class Issue < ApplicationRecord
     using: {
       tsearch: {
         prefix: true,
-        any_word: true,
         dictionary: "english"
-      }
+      },
+      trigram: {threshold:  0.1}
     }
   multisearchable :against => [:summary]
 end

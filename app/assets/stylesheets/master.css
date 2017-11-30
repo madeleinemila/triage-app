@@ -24,6 +24,12 @@ h1.user-form-heading {
   text-align: right;
 }
 
+/*.logo {
+  display: inline-block;
+  text-decoration: none;
+  z-index: 10;
+}*/
+
 h1::after {
   content: '';
   position: absolute;
@@ -70,7 +76,7 @@ nav {
 
 nav > a {
   padding: 1em;
-  font-size: 12px;
+  font-size: 14px;
   color: rgba(251, 251, 245, 0.9); /*offwhite*/
   text-decoration: none;
 }
@@ -80,11 +86,11 @@ nav > a:hover {
 }
 
 nav > .current-user {
-  font-size: 12px;
+  font-size: 14px;
   color: rgba(209, 219, 47, 1.00); /*green*/
 }
 
-nav > .sign-up {
+nav > .green-nav {
   color: rgba(209, 219, 47, 1.00); /*green*/
 }
 
@@ -356,7 +362,7 @@ a.x-tech-slash:hover {
 
 .lower-container {
   background-color: white;
-  min-height: 400px;
+  min-height: 300px;
 }
 
 .no-user {

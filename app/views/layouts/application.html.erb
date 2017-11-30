@@ -11,7 +11,7 @@
   <body>
     <div class="container">
       <nav>
-        <%= link_to 'Home', root_path %>
+        <%= link_to 'Search Everything', root_path, class: "green-nav" %>
         <%= link_to 'Browse All Issues', issues_path %>
         <%= link_to 'Browse All Fixes', fixes_path %>
         <%= link_to 'Browse All Tech', technologies_path %>
@@ -26,7 +26,7 @@
           <%= link_to 'Logout', login_path, :method => 'delete' %>
           <span class="current-user">Logged in as: <%= @current_user.name %></span>
         <% else %>
-          <%= link_to 'Sign Up', new_user_path, class: "sign-up"  %>
+          <%= link_to 'Sign Up', new_user_path, class: "green-nav"  %>
           <%= link_to 'Login', login_path, class: "login"  %>
         <% end %>
       </nav>
