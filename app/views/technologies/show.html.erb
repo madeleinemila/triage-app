@@ -7,28 +7,36 @@
 <div class="lower-container">
   <div class="inner-bound">
 
-    <% if @technology.links.present? %>
-      <h2>REFERENCE:</h2>
-      <%= markdown( @technology.links ) %>
+    <h2>REFERENCE:</h2>
+    <%= markdown( @technology.links ) %>
+
+    <% if @technology.issues.any? %>
+      <h3>This tech has these issues:</h3>
+      <ul class="all-list issue-list">
+        <% @technology.issues.each do |i| %>
+          <li>
+            <%= link_to i.summary, issue_path(i) %>
+          </li>
+        <% end %>
+      </ul>
     <% end %>
 
-    <h3>This tech has these issues:</h3>
-    <ul class="all-list issue-list">
-      <% @technology.issues.each do |i| %>
-        <li>
-          <%= link_to i.summary, issue_path(i) %>
-        </li>
-      <% end %>
-    </ul>
+    <% if @current_user.present? && @current_user.admin? %>
+      <div class="controls controls-issue">
+        <%= link_to 'Add an issue for this tech', "/issues/new/#{ @technology.id }" %>
+      </div>
+    <% end %>
 
-    <h3>This tech has these fixes:</h3>
-    <ul class="all-list fix-list">
-      <% @technology.fixes.each do |f| %>
-        <li>
-          <%= link_to f.title, fix_path(f) %>
-        </li>
-      <% end %>
-    </ul>
+    <% if @technology.fixes.any? %>
+      <h3>This tech has these fixes:</h3>
+      <ul class="all-list fix-list">
+        <% @technology.fixes.each do |f| %>
+          <li>
+            <%= link_to f.title, fix_path(f) %>
+          </li>
+        <% end %>
+      </ul>
+    <% end %>
 
 
     <div class="controls controls-tech">

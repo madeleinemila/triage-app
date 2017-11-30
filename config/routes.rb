@@ -42,12 +42,13 @@
 #                 login GET    /login(.:format)                     session#new
 #                       POST   /login(.:format)                     session#create
 #                       DELETE /login(.:format)                     session#destroy
-# 
+#
 
 Rails.application.routes.draw do
   root :to => "pages#home"
   resources :users, :only => [:index, :new, :create, :edit, :update]
   resources :issues
+  get '/issues/new/:id' => 'issues#new'
   get '/fixes/new/:id' => 'fixes#new'
   resources :fixes
   resources :technologies

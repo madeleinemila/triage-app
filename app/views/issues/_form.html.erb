@@ -1,7 +1,7 @@
 <% if @issue.errors.any? %>
   <ul>
     <% @issue.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
+      <li><%= msg.html_safe %></li>
     <% end %>
   </ul>
 <% end %>
@@ -21,7 +21,7 @@
   <fieldset>
     <%= f.label :technology_id %>
       <ul class="checkboxes">
-        <%= f.collection_check_boxes :technology_ids, @technologies, :id, :name do |b| %>
+        <%= f.collection_check_boxes :technology_ids, @technologies, :id, :name, checked: params[:id] do |b| %>
           <li>
             <%= b.check_box %>
             <%= b.label %>

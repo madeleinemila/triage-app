@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:400,500,600,700,800|Josefin+Sans:400,600,700|Nunito');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700|Nunito');
 
 * {
   /*border: 1px solid pink;*/
@@ -274,6 +274,10 @@ td.admin {
   height: 105vh;
 }
 
+/*other urls
+http://res.cloudinary.com/mrmy/image/upload/v1512045829/bg_server_blur_more_x5dwsk.jpg
+http://res.cloudinary.com/mrmy/image/upload/v1512045827/bg_server_blur_qmhhpa.jpg*/
+
 /***************************************************/
 
 .large-search {
@@ -403,6 +407,15 @@ a.x-tech-shade:hover {
 }
 
 .admin-new-fix a:hover {
+  color: rgba(248, 146, 45, 1); /*orange*/
+}
+
+.admin-new-issue a {
+  color: rgba(248, 146, 45, 0.8); /*orange*/
+  text-decoration: none;
+}
+
+.admin-new-issue a:hover {
   color: rgba(248, 146, 45, 1); /*orange*/
 }
 

@@ -17,6 +17,7 @@ class IssuesController < ApplicationController
   def new
     @issue = Issue.new
     @technologies = Technology.all.sort_by { |t| t.name.downcase }
+    @option = params[:id]
   end
 
   def create

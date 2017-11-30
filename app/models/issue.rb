@@ -18,7 +18,7 @@ class Issue < ApplicationRecord
   validate :must_have_one_tech
 
   def must_have_one_tech
-    errors.add(:base, 'Please select at least one associated technology') if self.technologies.blank?
+    errors.add(:base, 'Please select at least one associated technology. If the tech is not listed, please <a href="/technologies/new">create it</a> first.') if self.technologies.blank?
   end
 
   include PgSearch

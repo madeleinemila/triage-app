@@ -14,6 +14,7 @@ class Technology < ApplicationRecord
   has_many :fixes, :through => "issues"
 
   validates :name, :presence => true, :uniqueness => true
+  validates :links, :presence => true
 
   include PgSearch
   pg_search_scope :search_by_name, against: :name,
