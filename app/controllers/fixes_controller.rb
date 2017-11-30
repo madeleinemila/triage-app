@@ -2,12 +2,14 @@ class FixesController < ApplicationController
   before_action :check_if_admin, :except => [:index, :show]
 
   def index
+    # IF SEARCH TERM PRESENT:
     if params[:term]
-      @fixes = Fix.search_by_title_and_steps(params[:term])
+      @fixes = Fix.search_full_text(params[:term])
       if @fixes == []
         flash[:notice] = "No results found"
       end
     end
+    # For rest of page:
     @fixes_all = Fix.all
     @search = { :path => fixes_path, :type => "Search a list of all fix procedures here", :class => "fix-slash"  }
   end

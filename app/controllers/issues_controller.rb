@@ -2,9 +2,9 @@ class IssuesController < ApplicationController
   before_action :check_if_admin, :except => [:index, :show]
 
   def index
-    # IF A SEARCH TERM IS PRESENT:
+    # IF SEARCH TERM PRESENT:
     if params[:term]
-      @issues = Issue.search_by_summary_and_det(params[:term])
+      @issues = Issue.search_full_text(params[:term])
       if @issues == []
         flash[:notice] = "No results found"
       end
