@@ -531,3 +531,18 @@ button:focus {
 .grid-container > a {
   text-decoration: none;
 }
+
+/************** ADMIN CONTROLS ***************/
+
+.controls a {
+  font-family: 'Josefin Sans', sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: rgba(52, 72, 102, 1.00);
+  padding-right: 50px;
+  text-decoration: none;
+}
+
+.controls a:hover {
+  color: rgba(248, 146, 45, 0.5); /*orange*/
+}
