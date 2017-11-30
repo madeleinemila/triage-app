@@ -6,9 +6,10 @@
 
 <div class="lower-container">
   <div class="inner-bound">
-
-    <h2>REFERENCE:</h2>
-    <%= markdown( @technology.links ) %>
+    <div class="md-tech">
+      <h3>REFERENCE:</h3>
+      <%= markdown( @technology.links ) %>
+    </div>
 
     <% if @tech_issues.any? %>
       <h3>This tech has these issues:</h3>

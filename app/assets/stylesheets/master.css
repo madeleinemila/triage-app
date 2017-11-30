@@ -478,6 +478,27 @@ a.x-tech-shade:hover {
   color: rgba(248, 146, 45, 1.00); /*orange*/
 }
 
+.md-tech a {
+  color: rgba(79, 123, 185, 0.5); /*bluegrey*/
+  text-decoration: none;
+}
+
+.md-tech a:hover {
+  color: rgba(248, 146, 45, 1.00); /*orange*/
+}
+
+.md-issue a {
+  color: rgba(248, 146, 45, 0.75); /*orange*/
+  text-decoration: none;
+}
+
+.md-issue a:hover {
+  color: rgba(248, 146, 45, 1.00); /*orange*/
+}
+
+.md-tech {
+  padding-bottom: 50px;
+}
 
 .updated-time {
   color: rgba(251, 251, 245, 0.9); /*offwhite*/

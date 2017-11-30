@@ -47,6 +47,8 @@ class IssuesController < ApplicationController
 
   def show
     @issue = Issue.find params[:id]
+    @issue_fixes = @issue.fixes.sort_by { |f| f.title.downcase }
+    @issue_tech = @issue.technologies.sort_by { |t| t.name.downcase }
     @ctrl = { :type => "issue", :ed => edit_issue_path(@issue.id), :del => @issue }
   end
 

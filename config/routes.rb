@@ -16,6 +16,7 @@
 #                       PATCH  /issues/:id(.:format)                issues#update
 #                       PUT    /issues/:id(.:format)                issues#update
 #                       DELETE /issues/:id(.:format)                issues#destroy
+#                       GET    /issues/new/:tech_id(.:format)       issues#new
 #                       GET    /fixes/new/:id(.:format)             fixes#new
 #                 fixes GET    /fixes(.:format)                     fixes#index
 #                       POST   /fixes(.:format)                     fixes#create
@@ -42,13 +43,13 @@
 #                 login GET    /login(.:format)                     session#new
 #                       POST   /login(.:format)                     session#create
 #                       DELETE /login(.:format)                     session#destroy
-#
+# 
 
 Rails.application.routes.draw do
   root :to => "pages#home"
   resources :users, :only => [:index, :new, :create, :edit, :update]
   resources :issues
-  get '/issues/new/:id' => 'issues#new'
+  get '/issues/new/:tech_id' => 'issues#new'
   get '/fixes/new/:id' => 'fixes#new'
   resources :fixes
   resources :technologies

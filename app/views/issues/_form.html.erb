@@ -18,7 +18,7 @@
   </fieldset>
 
   <!-- select related tech WITH BLANK CHECKBOXES OR POPULATED FROM SHOW PAGE-->
-  <% if params[:id].nil? %>
+  <% if params[:tech_id].nil? %>
     <fieldset>
       <%= f.label :technology_id %>
         <ul class="checkboxes">
@@ -35,7 +35,7 @@
     <fieldset>
       <%= f.label :technology_id %>
         <ul class="checkboxes">
-          <%= f.collection_check_boxes :technology_ids, @technologies, :id, :name, checked: params[:id] do |b| %>
+          <%= f.collection_check_boxes :technology_ids, @technologies, :id, :name, checked: params[:tech_id] do |b| %>
             <li>
               <%= b.check_box %>
               <%= b.label %>
