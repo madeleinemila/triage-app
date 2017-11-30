@@ -11,10 +11,10 @@
   <body>
     <div class="container">
       <nav>
-        <%= link_to 'Search Everything', root_path, class: "green-nav" %>
-        <%= link_to 'Browse All Issues', issues_path %>
-        <%= link_to 'Browse All Fixes', fixes_path %>
-        <%= link_to 'Browse All Tech', technologies_path %>
+        <%= link_to 'Home - Search', root_path, class: "green-nav" %>
+        <%= link_to 'Browse Issues', issues_path %>
+        <%= link_to 'Browse Fixes', fixes_path %>
+        <%= link_to 'Browse Tech', technologies_path %>
         <% if (@current_user.present? && @current_user.admin?) %>
           <%= link_to 'New Issue', new_issue_path %>
           <%= link_to 'New Fix', new_fix_path %>

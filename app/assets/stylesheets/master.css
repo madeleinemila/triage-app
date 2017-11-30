@@ -458,20 +458,13 @@ p.pin-status {
   font-size: 19px;
 }
 
-a.pin-issue {
-    color: rgba(248, 146, 45, 1.00); /*orange*/
-}
-
-a.pin-fix {
-  color: rgba(209, 219, 47, 1.00); /*green*/
-}
-
-a.pin-tech {
+a.pin {
   color: rgba(209, 219, 47, 1.00); /*green*/
 }
 
 a.pin:hover {
-  color: rgba(251, 251, 245, 0.9); /*offwhite*/
+  /*color: rgba(251, 251, 245, 0.9); /*offwhite*/
+  color: rgba(248, 146, 45, 1.00); /*orange*/
   /*text-decoration: underline;*/
   /*color: rgba(181, 43, 53, 1.00); /*red*/
 }
