@@ -324,9 +324,20 @@ td.admin {
     color: rgba(181, 43, 53, 1.00);
 }
 
+.btn-issue-slash i:hover {
+  color: rgba(248, 146, 45, 1.00); /*orange*/
+}
+
+.btn-fix-slash i:hover {
+  color: rgba(209, 219, 47, 1.00); /*green*/
+}
+
+.btn-tech-slash i:hover {
+  color: rgba(79, 123, 185, 1.00); /*bluegrey*/
+}
+
 a.clear-search {
   color: rgba(251, 251, 245, 1);
-  /*color: white;*/
   text-decoration: none;
   padding: 0 10px;
   font-size: 50px;
