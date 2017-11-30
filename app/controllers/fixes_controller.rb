@@ -10,8 +10,8 @@ class FixesController < ApplicationController
       end
     end
     # For rest of page:
-    @fixes_all = Fix.all
-    @search = { :path => fixes_path, :type => "Search a list of all fix procedures here.", :class => "fix-slash"  }
+    @fixes_all = Fix.all.sort_by { |f| f.title.downcase }
+    @search = { :path => fixes_path, :type => "Search by fix. Get links to step-by-step guides.", :class => "fix-slash"  }
   end
 
   def new

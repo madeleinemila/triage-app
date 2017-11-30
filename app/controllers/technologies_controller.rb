@@ -2,6 +2,7 @@ class TechnologiesController < ApplicationController
   before_action :check_if_admin, :except => [:index, :show]
 
   def index
+    # IF SEARCH TERM PRESENT:
     if params[:term]
       @technologies = Technology.search_by_name(params[:term])
       @technologies = @technologies.sort_by { |t| t.name.downcase }
@@ -9,8 +10,9 @@ class TechnologiesController < ApplicationController
         flash[:notice] = "No results found"
       end
     end
+    # For rest of page:
     @technologies_all = Technology.all.sort_by { |t| t.name.downcase }
-    @search = { :path => technologies_path, :type => "Search by technology to get a link to all related fixes and manuals.", :class => "tech-slash"  }
+    @search = { :path => technologies_path, :type => "Search by technology. Get links to all related fixes and manuals.", :class => "tech-slash"  }
   end
 
   def new

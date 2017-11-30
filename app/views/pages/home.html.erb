@@ -15,7 +15,7 @@
   <% if params[:term] %>
     <ul class="god-results">
       <% @results.each do |r| %>
-        <li><%= link_to r.content, r.searchable, class: "green-hover" %></li>
+        <li><%= link_to "#{ r.searchable_type.upcase } - #{ r.content }", r.searchable, class: "green-hover" %></li>
       <% end %>
       <% if flash[:notice] && !@results.any? %>
         <li><%= flash[:notice] %></li>
@@ -25,6 +25,7 @@
 
 </div>
 <!-- end multi search -->
+
 <% if session[:user_id].present? %>
   <div class="lower-container">
     <div class="inner-bound">

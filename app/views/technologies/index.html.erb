@@ -6,7 +6,7 @@
   <ul class=god-results>
     <% @technologies.each do |t| %>
       <li>
-        <%= link_to t.name, technology_path(t.id) %>
+        <%= link_to t.name, technology_path(t.id), class: "green-hover" %>
       </li>
     <% end %>
     <% if flash[:notice] && !@technologies.any? %>
@@ -17,7 +17,7 @@
 
 <div class="lower-container">
   <div class="inner-bound">
-    <h2>All Technologies</h2>
+    <h2>All Technologies A-Z</h2>
 
     <ul class="all-list tech-list">
       <% @technologies_all.each do |t| %>

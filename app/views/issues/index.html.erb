@@ -7,7 +7,7 @@
   <ul class=god-results>
     <% @issues.each do |i| %>
       <li>
-        <%= link_to i.summary, issue_path(i.id) %>
+        <%= link_to i.summary, issue_path(i.id), class: "green-hover" %>
       </li>
     <% end %>
     <% if flash[:notice] && !@issues.any? %>
@@ -18,7 +18,7 @@
 
 <div class="lower-container">
   <div class="inner-bound">
-    <h2>All Issues</h2>
+    <h2>All Issues A-Z</h2>
 
     <ul class="all-list issue-list">
       <% @issues_all.each do |i| %>
