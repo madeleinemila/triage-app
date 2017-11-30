@@ -1,0 +1,28 @@
+<div class="large-search">
+
+  <!-- search bar -->
+  <%= form_tag('/', method: :get) do %>
+    <%= text_field_tag 'term', params[:term], :autofocus => true, placeholder: "Need help?  You can ask me about an issue or a procedure you need to know.", class: "search" %>
+    <span class="slash">/</span>
+    <%= button_tag(type: 'submit', class: "btn submit", id: 'mag-glass-main') do %>
+      <div class="mag-container">
+        <i class="fa fa-search fa-flip-horizontal" aria-hidden="true"></i>
+      </div>
+      <%# alternate mag-glass local image: image_tag 'mag-white.png', class: "mag" %>
+    <% end %>
+    <%= link_to 'X', '/', class: "clear-search" %>
+  <% end %>
+
+  <!-- results -->
+  <% if params[:term] %>
+    <ul class="god-results">
+      <% @results.each do |r| %>
+        <li><%= link_to "#{ r.searchable_type.upcase } - #{ r.content }", r.searchable, class: "green-hover" %></li>
+      <% end %>
+      <% if flash[:notice] && !@results.any? %>
+        <li><%= flash[:notice] %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+</div>

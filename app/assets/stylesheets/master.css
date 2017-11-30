@@ -306,18 +306,23 @@ td.admin {
   vertical-align: middle;
 }
 
-.mag {
+.mag { /* for alt local image */
   width: 40px;
   transform: rotate(-10deg);
 }
 
-/*.fa-search {
+.fa-search {
   color: rgba(251, 251, 245, 1);
-}*/
+  font-size: 41px !important;
+}
 
-/*.fa-search:hover, .fa-search:focus {
+.mag-container {
+  transform: translatey(-2px) rotate(-8deg);
+}
+
+.fa-search:hover {
     color: rgba(181, 43, 53, 1.00);
-}*/
+}
 
 a.clear-search {
   color: rgba(251, 251, 245, 1);
