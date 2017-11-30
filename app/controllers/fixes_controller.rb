@@ -11,7 +11,7 @@ class FixesController < ApplicationController
     end
     # For rest of page:
     @fixes_all = Fix.all
-    @search = { :path => fixes_path, :type => "Search a list of all fix procedures here", :class => "fix-slash"  }
+    @search = { :path => fixes_path, :type => "Search a list of all fix procedures here.", :class => "fix-slash"  }
   end
 
   def new

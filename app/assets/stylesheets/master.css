@@ -419,12 +419,29 @@ a.x-tech-slash:hover {
 }
 
 .md {
-  /*background-color: red;*/
   border-top: 10px solid rgba(209, 219, 47, 1.00); /*green*/
-  /*border-radius: 5px;*/
   padding: 15px;
   min-height: 350px;
+  color: rgba(15, 15, 15, 1.0);
 }
+
+.md > h1 {
+  color: rgba(15, 15, 15, 1.0);
+}
+
+.md > h1::after {
+  border-bottom: 1px solid rgba(15, 15, 15, 1.0);
+}
+
+.md a {
+  color: rgba(79, 123, 185, 0.5); /*bluegrey*/
+  text-decoration: none;
+}
+
+.md a:hover {
+  color: rgba(248, 146, 45, 1.00); /*orange*/
+}
+
 
 .updated-time {
   color: rgba(251, 251, 245, 0.9); /*offwhite*/
@@ -458,15 +475,28 @@ p.pin-status {
   font-size: 19px;
 }
 
-a.pin {
+a.pin-issue {
+  color: rgba(248, 146, 45, 0.8); /*orange*/
+}
+
+a.pin-issue:hover {
+  color: rgba(248, 146, 45, 1.00); /*orange*/
+}
+
+a.pin-fix {
+  color: rgba(209, 219, 47, 0.8); /*green*/
+}
+
+a.pin-fix:hover {
   color: rgba(209, 219, 47, 1.00); /*green*/
 }
 
-a.pin:hover {
-  /*color: rgba(251, 251, 245, 0.9); /*offwhite*/
-  color: rgba(248, 146, 45, 1.00); /*orange*/
-  /*text-decoration: underline;*/
-  /*color: rgba(181, 43, 53, 1.00); /*red*/
+a.pin-tech {
+  color: rgba(250, 250, 241, 0.8);
+}
+
+a.pin-tech:hover {
+  color: rgba(200, 220, 255, 0.6);
 }
 
 .rounded {
@@ -495,6 +525,11 @@ input:focus, textarea:focus {
     box-shadow: 0 0 10px rgba(79, 123, 185, 0.5); /*green*/
 }
 
+select {
+    border: 1px #ddd solid;
+    font-family: 'Avenir', sans-serif;
+}
+
 button:focus {
     outline: none;
     color: rgba(181, 43, 53, 1.00); /*red*/
@@ -510,8 +545,6 @@ button:focus {
 }
 
 .grid-box {
-  /*background-color: red;*/
-  /*box-sizing: border-box;*/
   height: 60px;
   padding: 30px 0px 30px 20px;
   color: rgba(15, 15, 15, 1.00);
@@ -525,17 +558,53 @@ button:focus {
   text-decoration: none;
 }
 
-/************** ADMIN CONTROLS ***************/
+
+/************** LOWER CONTROLS ***************/
+
+.controls {
+  padding: 20px 0;
+}
 
 .controls a {
   font-family: 'Josefin Sans', sans-serif;
   text-transform: uppercase;
   font-weight: bold;
-  color: rgba(52, 72, 102, 1.00);
   padding-right: 50px;
   text-decoration: none;
 }
 
 .controls a:hover {
   color: rgba(248, 146, 45, 0.5); /*orange*/
+}
+
+.controls-issue a {
+  color: rgba(248, 146, 45, 0.75); /*orange*/
+}
+
+.controls-issue a:hover {
+  color: rgba(248, 146, 45, 1); /*orange*/
+}
+
+.controls-fix a {
+  color: rgba(209, 219, 47, 0.75); /*green*/
+}
+
+.controls-fix a:hover {
+  color: rgba(209, 219, 47, 1); /*green*/
+}
+
+.controls-tech a {
+  color: rgba(79, 123, 185, 0.4); /*bluegrey*/
+}
+
+.controls-tech a:hover {
+  color: rgba(79, 123, 185, 1); /*bluegrey*/
+}
+
+.admin-controls a {
+  color: rgba(79, 123, 185, 0.6); /*bluegrey*/
+}
+
+.admin-controls a:hover {
+  color: rgba(79, 123, 185, 1); /*bluegrey*/
 }

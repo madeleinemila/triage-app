@@ -11,7 +11,7 @@ class IssuesController < ApplicationController
     end
     # For rest of page:
     @issues_all = Issue.all
-    @search = { :path => issues_path, :type => "Got a particular issue?  Search by issue and get a link to all the possible solutions.", :class => "issue-slash"  }
+    @search = { :path => issues_path, :type => "Search by issue. Get a link to all the possible solutions.", :class => "issue-slash"  }
   end
 
   def new

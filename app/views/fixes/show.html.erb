@@ -16,7 +16,7 @@
 
 
     <h3>This fix relates to:</h3>
-    <ul class="all-list fix-list">
+    <ul class="all-list issue-list">
       <% @fix.issues.each do |i| %>
         <li><%= link_to i.summary, issue_path(i.id) %></li>
       <% end %>
@@ -30,7 +30,9 @@
     </ul>
 
 
-
+    <div class="controls controls-fix">
+      <%= link_to "Back to Browse Fixes", fixes_path %>
+    </div>
     <!-- ADMIN CONTROLS -->
     <%= render partial: "shared/admin_ctrl" %>
 
