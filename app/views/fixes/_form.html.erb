@@ -1,19 +1,27 @@
+<% if @fix.errors.any? %>
+  <ul>
+    <% @fix.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+
 <%= form_for @fix do |f| %>
   <!-- select issue -->
   <fieldset>
     <%= f.label :issue_ids, "A FIX FOR ISSUE:" %>
-    <%= f.collection_select :issue_ids, Issue.all, :id, :summary %>
+    <%= f.collection_select :issue_ids, Issue.all, :id, :summary, {:selected => params[:id], :include_blank => 'Please select an issue...'} %>
   </fieldset>
   <!---->
 
   <fieldset>
     <%= f.label :title %>
-    <%= f.text_field :title, :class => "sentence" %>
+    <%= f.text_field :title, :class => "sentence", :required => true %>
   </fieldset>
 
   <fieldset>
     <%= f.label :steps %>
-    <%= f.text_area :steps, :class => "sentence long-text" %>
+    <%= f.text_area :steps, :class => "sentence long-text", :required => true %>
   </fieldset>
 
   <fieldset>

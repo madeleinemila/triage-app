@@ -18,8 +18,12 @@ class TechnologiesController < ApplicationController
   end
 
   def create
-    technology = Technology.create technology_params
-    redirect_to technology_path(technology)
+    @technology = Technology.new technology_params
+    if @technology.save
+      redirect_to technology_path(@technology)
+    else
+      render :new
+    end
   end
 
   def edit

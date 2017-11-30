@@ -1,7 +1,15 @@
+<% if @technology.errors.any? %>
+  <ul>
+    <% @technology.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+
 <%= form_for @technology do |f| %>
   <fieldset>
     <%= f.label :name %>
-    <%= f.text_field :name, :class => "sentence" %>
+    <%= f.text_field :name, :class => "sentence", :required => true %>
   </fieldset>
 
   <fieldset>

@@ -10,13 +10,20 @@
   <div class="inner-bound">
 
     <h2>FIXES:</h2>
-    <ul class="all-list fix-list">
-    <% @issue.fixes.each do |f| %>
-      <li>
-        <%= link_to f.title, fix_path(f.id) %>
-      </li>
+
+
+    <% if @issue.fixes.any? %>
+      <ul class="all-list fix-list">
+      <% @issue.fixes.each do |f| %>
+        <li>
+          <%= link_to f.title, fix_path(f.id) %>
+        </li>
+      <% end %>
+      </ul>
     <% end %>
-    </ul>
+    <div class="controls controls-fix">
+      <%= link_to 'Add a fix for this issue', "/fixes/new/#{ @issue.id }" %>
+    </div>
 
     <% if @issue.technologies.any? %>
       <h3>This issue involves the following tech:</h3>
@@ -30,7 +37,7 @@
     <% end %>
 
 
-    <div class="controls controls-issue">
+    <div class="controls controls-tech">
       <%= link_to "Back to Browse Issues", issues_path %>
     </div>
     <!-- ADMIN CONTROLS -->

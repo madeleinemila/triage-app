@@ -204,6 +204,14 @@ form.new-user {
   border: 6px solid rgba(248, 146, 45, 1.00);
 }
 
+.field_with_errors > #technology_name {
+  border: 6px solid rgba(79, 123, 185, 1.00);
+}
+
+#new_technology .field_with_errors {
+    display: inline-block;
+}
+
 .user-info .field_with_errors > input {
   border: 6px solid rgba(248, 146, 45, 1.00);
 }
@@ -586,7 +594,7 @@ button:focus {
 }
 
 .controls-fix a {
-  color: rgba(209, 219, 47, 0.75); /*green*/
+  color: rgba(189, 199, 27, 0.75); /*green*/
 }
 
 .controls-fix a:hover {

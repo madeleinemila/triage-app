@@ -16,6 +16,7 @@
 #                       PATCH  /issues/:id(.:format)                issues#update
 #                       PUT    /issues/:id(.:format)                issues#update
 #                       DELETE /issues/:id(.:format)                issues#destroy
+#                       GET    /fixes/new/:id(.:format)             fixes#new
 #                 fixes GET    /fixes(.:format)                     fixes#index
 #                       POST   /fixes(.:format)                     fixes#create
 #               new_fix GET    /fixes/new(.:format)                 fixes#new
@@ -47,6 +48,7 @@ Rails.application.routes.draw do
   root :to => "pages#home"
   resources :users, :only => [:index, :new, :create, :edit, :update]
   resources :issues
+  get '/fixes/new/:id' => 'fixes#new'
   resources :fixes
   resources :technologies
   resources :favorite_issues, :only => [:create, :destroy]

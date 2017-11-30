@@ -19,8 +19,12 @@ class FixesController < ApplicationController
   end
 
   def create
-    fix = Fix.create fix_params
-    redirect_to fix_path(fix)
+    @fix = Fix.new fix_params
+    if @fix.save
+      redirect_to fix_path(@fix)
+    else
+      render :new
+    end
   end
 
   def edit

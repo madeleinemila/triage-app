@@ -1,20 +1,16 @@
 <!-- TECH SHOW SINGLE -->
 <div class="show-container">
   <h2 class="tech-slash">TECHNOLOGY: <%= @technology.name %></h2>
-  <br>
+  <p class="updated-time">Last updated <%= time_ago_in_words @technology.updated_at %> ago</p>
 </div>
 
 <div class="lower-container">
   <div class="inner-bound">
 
-    <h2>REFERENCE:</h2>
-
     <% if @technology.links.present? %>
+      <h2>REFERENCE:</h2>
       <%= markdown( @technology.links ) %>
     <% end %>
-
-    <p class="updated-time">Last updated <%= time_ago_in_words @technology.updated_at %> ago</p>
-
 
     <h3>This tech has these issues:</h3>
     <ul class="all-list issue-list">
