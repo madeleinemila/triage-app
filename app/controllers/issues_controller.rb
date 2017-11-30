@@ -11,7 +11,7 @@ class IssuesController < ApplicationController
     end
     # For rest of page:
     @issues_all = Issue.all.sort_by { |i| i.summary.downcase }
-    @search = { :path => issues_path, :type => "Search by issue. Get links to all possible fixes.", :class => "issue-slash"  }
+    @search = { :path => issues_path, :type => "Search by issue. Get links to all possible fixes.", :class => "issue-shade"  }
   end
 
   def new

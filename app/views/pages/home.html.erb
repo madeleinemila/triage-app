@@ -11,7 +11,7 @@
         <% @current_fav_issues.each do |fi| %>
           <%= link_to issue_path(fi) do %>
             <div class="grid-box">
-              <h4><span class="issue-slash">/</span> ISSUE</h4>
+              <h4><span class="issue-shade">/</span> ISSUE</h4>
               <p><%= fi.summary %></p>
             </div>
           <% end %>
@@ -20,7 +20,7 @@
         <% @current_fav_fixes.each do |ff| %>
           <%= link_to fix_path(ff) do %>
             <div class="grid-box">
-              <h4><span class="fix-slash">/</span> FIX</h4>
+              <h4><span class="fix-shade">/</span> FIX</h4>
               <p><%= ff.title %></p>
             </div>
           <% end %>
@@ -29,7 +29,7 @@
         <% @current_fav_techs.each do |ft| %>
           <%= link_to technology_path(ft) do %>
             <div class="grid-box">
-              <h4><span class="tech-slash">/</span> TECH</h4>
+              <h4><span class="tech-shade">/</span> TECH</h4>
               <p><%= ft.name %></p>
             </div>
           <% end %>

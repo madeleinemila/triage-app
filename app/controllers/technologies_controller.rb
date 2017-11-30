@@ -12,7 +12,7 @@ class TechnologiesController < ApplicationController
     end
     # For rest of page:
     @technologies_all = Technology.all.sort_by { |t| t.name.downcase }
-    @search = { :path => technologies_path, :type => "Search by technology. Get links to all related fixes and manuals.", :class => "tech-slash"  }
+    @search = { :path => technologies_path, :type => "Search by technology. Get links to all related fixes and manuals.", :class => "tech-shade"  }
   end
 
   def new

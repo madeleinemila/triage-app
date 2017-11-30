@@ -24,12 +24,6 @@ h1.user-form-heading {
   text-align: right;
 }
 
-/*.logo {
-  display: inline-block;
-  text-decoration: none;
-  z-index: 10;
-}*/
-
 h1::after {
   content: '';
   position: absolute;
@@ -142,8 +136,6 @@ input[type="submit"] {
 
 .form-inner-bound {
   background-color: rgba(15, 15, 15, 0.8);
-  /*background-color: rgba(50, 75, 111, 0.8); /*bluegrey darker*/
-  /*background-color: rgba(15, 23, 35, 0.7);*/
   color: white;
   max-width: 960px;
   margin: 0 auto;
@@ -242,15 +234,15 @@ input.search {
     padding: 0px 14px;
 }
 
-.issue-slash {
+.issue-shade {
     color: rgba(248, 146, 45, 1.00); /*orange*/
 }
 
-.fix-slash {
+.fix-shade {
   color: rgba(209, 219, 47, 1.00); /*green*/
 }
 
-.tech-slash {
+.tech-shade {
   color: rgba(79, 123, 185, 1.00); /*bluegrey*/
 }
 
@@ -293,12 +285,6 @@ td.admin {
   width: 600px;
 }
 
-/*.large-search input[type="submit"] {
-  background-color: rgba(0, 0, 0, 0);
-  color: white;
-  border: none;
-}*/
-
 #mag-glass-main {
   background-color: rgba(0, 0, 0, 0);
   color: white;
@@ -324,15 +310,15 @@ td.admin {
     color: rgba(181, 43, 53, 1.00);
 }
 
-.btn-issue-slash i:hover {
+.btn-issue-shade i:hover {
   color: rgba(248, 146, 45, 1.00); /*orange*/
 }
 
-.btn-fix-slash i:hover {
+.btn-fix-shade i:hover {
   color: rgba(209, 219, 47, 1.00); /*green*/
 }
 
-.btn-tech-slash i:hover {
+.btn-tech-shade i:hover {
   color: rgba(79, 123, 185, 1.00); /*bluegrey*/
 }
 
@@ -352,15 +338,15 @@ a.clear-search:hover, a.clear-search:focus {
   color: rgba(181, 43, 53, 1.00); /*red*/
 }
 
-a.x-issue-slash:hover {
+a.x-issue-shade:hover {
   color: rgba(248, 146, 45, 1.00); /*orange*/
 }
 
-a.x-fix-slash:hover {
+a.x-fix-shade:hover {
   color: rgba(209, 219, 47, 1.00); /*green*/
 }
 
-a.x-tech-slash:hover {
+a.x-tech-shade:hover {
   color: rgba(79, 123, 185, 1.00); /*bluegrey*/
 }
 
@@ -431,7 +417,7 @@ a.x-tech-slash:hover {
 }
 
 .all-list li::before {
-  content: "\2022";  /* Unicode of character to precede the list item */
+  content: "\2022";  /* unicode of character to precede list item */
   font-size: 2em;
   padding-right: 1.1225em;
   position: relative;
@@ -439,7 +425,7 @@ a.x-tech-slash:hover {
 }
 
 .issue-list {
-  color: rgba(246, 145, 58, 1.00);  /* color of bullet or square */
+  color: rgba(246, 145, 58, 1.00);  /* color of bullet */
 }
 
 .fix-list {
@@ -547,8 +533,6 @@ a.pin-tech:hover {
 /****************** Focus *****************/
 input:focus, textarea:focus {
     outline: none;
-    /*border: 1px solid rgba(181, 43, 54, 1.00);
-    box-shadow: 0 0 10px rgba(181, 43, 54, 1.00);*/
 }
 
 .admin-new input:focus, .admin-new textarea:focus {
