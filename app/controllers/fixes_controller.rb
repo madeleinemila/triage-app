@@ -50,6 +50,7 @@ class FixesController < ApplicationController
 
   def show
     @fix = Fix.find params[:id]
+    @fix_tech = @fix.technologies.sort_by { |t| t.name.downcase }
     @ctrl = { :type => "fix", :ed => edit_fix_path(@fix.id), :del => @fix }
   end
 

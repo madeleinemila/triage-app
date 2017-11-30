@@ -24,7 +24,7 @@
 
     <h3>This fix involves the following tech:</h3>
     <ul class="all-list tech-list">
-      <% @fix.technologies.each do |t| %>
+      <% @fix_tech.each do |t| %>
         <li><%= link_to t.name, technology_path(t.id) %></li>
       <% end %>
     </ul>

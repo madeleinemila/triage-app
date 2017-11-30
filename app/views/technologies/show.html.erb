@@ -10,10 +10,10 @@
     <h2>REFERENCE:</h2>
     <%= markdown( @technology.links ) %>
 
-    <% if @technology.issues.any? %>
+    <% if @tech_issues.any? %>
       <h3>This tech has these issues:</h3>
       <ul class="all-list issue-list">
-        <% @technology.issues.each do |i| %>
+        <% @tech_issues.each do |i| %>
           <li>
             <%= link_to i.summary, issue_path(i) %>
           </li>
@@ -27,10 +27,10 @@
       </div>
     <% end %>
 
-    <% if @technology.fixes.any? %>
+    <% if @tech_fixes.any? %>
       <h3>This tech has these fixes:</h3>
       <ul class="all-list fix-list">
-        <% @technology.fixes.each do |f| %>
+        <% @tech_fixes.each do |f| %>
           <li>
             <%= link_to f.title, fix_path(f) %>
           </li>

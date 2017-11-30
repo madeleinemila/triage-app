@@ -43,6 +43,8 @@ class TechnologiesController < ApplicationController
 
   def show
     @technology = Technology.find params[:id]
+    @tech_issues = @technology.issues.sort_by { |i| i.summary.downcase }
+    @tech_fixes = @technology.fixes.sort_by { |f| f.title.downcase }
     @ctrl = { :type => "technology", :ed => edit_technology_path(@technology.id), :del => @technology }
   end
 

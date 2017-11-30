@@ -17,19 +17,34 @@
     <%= f.text_area :details, :class => "sentence long-text" %>
   </fieldset>
 
-  <!-- select related tech -->
-  <fieldset>
-    <%= f.label :technology_id %>
-      <ul class="checkboxes">
-        <%= f.collection_check_boxes :technology_ids, @technologies, :id, :name, checked: params[:id] do |b| %>
-          <li>
-            <%= b.check_box %>
-            <%= b.label %>
-          </li>
-        <% end %>
-      </ul>
-  </fieldset>
-  <!---->
+  <!-- select related tech WITH BLANK CHECKBOXES OR POPULATED FROM SHOW PAGE-->
+  <% if params[:id].nil? %>
+    <fieldset>
+      <%= f.label :technology_id %>
+        <ul class="checkboxes">
+          <%= f.collection_check_boxes :technology_ids, @technologies, :id, :name do |b| %>
+            <li>
+              <%= b.check_box %>
+              <%= b.label %>
+            </li>
+          <% end %>
+        </ul>
+    </fieldset>
+  <% else %>
+    <!-- select related tech EX TECH SHOW PAGE WITH TECH PRE-SELECTED -->
+    <fieldset>
+      <%= f.label :technology_id %>
+        <ul class="checkboxes">
+          <%= f.collection_check_boxes :technology_ids, @technologies, :id, :name, checked: params[:id] do |b| %>
+            <li>
+              <%= b.check_box %>
+              <%= b.label %>
+            </li>
+          <% end %>
+        </ul>
+    </fieldset>
+  <% end %>
+  <!-- end select checkboxes -->
 
   <fieldset>
     <label></label>
