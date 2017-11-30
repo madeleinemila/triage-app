@@ -16,6 +16,8 @@ class FixesController < ApplicationController
 
   def new
     @fix = Fix.new
+    @issues = Issue.all.sort_by { |i| i.summary.downcase }
+    @option = params[:id]
   end
 
   def create
@@ -29,6 +31,8 @@ class FixesController < ApplicationController
 
   def edit
     @fix = Fix.find params[:id]
+    @issues = Issue.all.sort_by { |i| i.summary.downcase }
+    @option = @fix.issue_ids.first
   end
 
   def update
