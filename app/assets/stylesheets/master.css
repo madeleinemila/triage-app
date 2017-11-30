@@ -667,3 +667,18 @@ button:focus {
 .admin-controls a:hover {
   color: rgba(79, 123, 185, 1); /*bluegrey*/
 }
+
+
+/*********** BLUR **********/
+
+div.blur {
+  background-image: url(http://res.cloudinary.com/mrmy/image/upload/v1512045827/bg_server_blur_qmhhpa.jpg);
+}
+
+h1.blur {
+  filter: blur(10px);
+}
+
+/*server image urls for quick ref
+http://res.cloudinary.com/mrmy/image/upload/v1512045829/bg_server_blur_more_x5dwsk.jpg
+http://res.cloudinary.com/mrmy/image/upload/v1512045827/bg_server_blur_qmhhpa.jpg*/
