@@ -9,10 +9,8 @@
 <div class="lower-container">
   <div class="inner-bound">
 
-    <h2>FIXES:</h2>
-
-
     <% if @issue.fixes.any? %>
+      <h2>FIXES:</h2>
       <ul class="all-list fix-list">
       <% @issue.fixes.each do |f| %>
         <li>

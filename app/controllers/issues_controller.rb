@@ -35,9 +35,13 @@ class IssuesController < ApplicationController
   end
 
   def update
-    issue = Issue.find params[:id]
-    issue.update issue_params
-    redirect_to issue
+    @issue = Issue.find params[:id]
+    if @issue.update issue_params
+      redirect_to @issue
+    else
+      @technologies = Technology.all.sort_by { |t| t.name.downcase }
+      render :edit
+    end
   end
 
   def show

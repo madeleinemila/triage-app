@@ -15,7 +15,7 @@ class User < ApplicationRecord
   has_secure_password
   validates :name, :presence => true
   validates :email, :presence => true, :uniqueness => true
-  validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
+  validates :password, presence: true, length: { minimum: 6 }, allow_nil: true # allow_nil allows changing other params without changing password, not actually allowing nil passwords
   # polymorphic
   has_many :favorites
   has_many :favorite_issues, :through => :favorites, :source => "favorited", :source_type => "Issue"

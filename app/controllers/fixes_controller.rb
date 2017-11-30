@@ -36,9 +36,14 @@ class FixesController < ApplicationController
   end
 
   def update
-    fix = Fix.find params[:id]
-    fix.update fix_params
-    redirect_to fix_path(fix)
+    @fix = Fix.find params[:id]
+    if @fix.update fix_params
+      redirect_to fix_path(@fix)
+    else
+      @issues = Issue.all.sort_by { |i| i.summary.downcase }
+      @option = @fix.issue_ids.first
+      render :edit
+    end
   end
 
   def show
