@@ -164,14 +164,14 @@ form.new-user {
 .user-info input {
   display: block;
   margin: 1em 0 1em 0;
-  box-sizing: border-box; /* TODO prefixes */
+  box-sizing: border-box;
   width: 400px;
   height: 54px;
 }
 
 .new-user-info input {
   display: block;
-  box-sizing: border-box; /* TODO prefixes */
+  box-sizing: border-box;
   margin: 10px 0 10px 0;
   width: 400px;
   height: 54px;
@@ -495,11 +495,15 @@ a.x-tech-slash:hover {
 }
 
 p.pin-status {
-  color: rgba(251, 251, 245, 0.9); /*offwhite*/
   display: inline-block;
   font-weight: bold;
   font-size: 20px;
   margin-left: 50px;
+}
+
+p.pin-status > a {
+  color: rgba(251, 251, 245, 0.9); /*offwhite*/
+  text-decoration: none;
 }
 
 .pin-controls > a {

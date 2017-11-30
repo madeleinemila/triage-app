@@ -5,7 +5,8 @@ class FavoriteIssuesController < ApplicationController
     if Favorite.create(favorited: @issue, user: @current_user)
       redirect_to issue_path(@issue.id, anchor: "pin-update-i")
     else
-      redirect_to @issue, alert: "Sorry, I can't pin that for you."
+      flash[:alert] = "Sorry, something went wrong, please try again."
+      redirect_to @issue
     end
   end
 

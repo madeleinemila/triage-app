@@ -5,7 +5,8 @@ class FavoriteFixesController < ApplicationController
     if Favorite.create(favorited: @fix, user: @current_user)
       redirect_to fix_path(@fix.id, anchor: "pin-update-f")
     else
-      redirect_to @fix, alert: "Sorry, I can't pin that for you."
+      flash[:alert] = "Sorry, something went wrong, please try again."    
+      redirect_to @fix
     end
   end
 

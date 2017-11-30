@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   before_action :check_if_admin, :only => [:index]
 
   def index
-    @users = User.all.sort_by { |u| [u.name.downcase] } # TODO pagination gem poss needed
+    @users = User.all.sort_by { |u| [u.name.downcase] }
   end
 
   def new

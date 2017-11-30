@@ -5,7 +5,8 @@ class FavoriteTechnologiesController < ApplicationController
     if Favorite.create(favorited: @technology, user: @current_user)
       redirect_to technology_path(@technology.id, anchor: "pin-update-t")
     else
-      redirect_to @technology, alert: "Sorry, I can't pin that for you." #TODO put these somewhere or delete
+      flash[:alert] = "Sorry, something went wrong, please try again."
+      redirect_to @technology
     end
   end
 
