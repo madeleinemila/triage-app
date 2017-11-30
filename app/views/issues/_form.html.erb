@@ -1,7 +1,15 @@
+<% if @issue.errors.any? %>
+  <ul>
+    <% @issue.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+
 <%= form_for @issue do |f| %>
   <fieldset>
     <%= f.label :summary %>
-    <%= f.text_field :summary, :class => "sentence" %>
+    <%= f.text_field :summary, :class => "sentence", :required => true %>
   </fieldset>
 
   <fieldset>

@@ -20,8 +20,13 @@ class IssuesController < ApplicationController
   end
 
   def create
-    issue = Issue.create issue_params
-    redirect_to issue_path(issue)
+    @issue = Issue.new issue_params
+    if @issue.save
+      redirect_to issue_path(@issue)
+    else
+      @technologies = Technology.all.sort_by { |t| t.name.downcase }
+      render :new
+    end
   end
 
   def edit

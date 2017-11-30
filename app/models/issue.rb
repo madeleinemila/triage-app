@@ -11,9 +11,16 @@
 #
 
 class Issue < ApplicationRecord
-  # TODO validations
   has_and_belongs_to_many :fixes
   has_and_belongs_to_many :technologies
+
+  validates :summary, :presence => true
+  validate :must_have_one_tech
+
+  def must_have_one_tech
+    errors.add(:base, 'Please select at least one associated technology') if self.technologies.blank?
+  end
+
   include PgSearch
   pg_search_scope :search_full_text,
     against: {
