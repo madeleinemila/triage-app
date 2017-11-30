@@ -31,9 +31,12 @@ class TechnologiesController < ApplicationController
   end
 
   def update
-    technology = Technology.find params[:id]
-    technology.update technology_params
-    redirect_to technology_path(technology)
+    @technology = Technology.find params[:id]
+    if @technology.update technology_params
+      redirect_to technology_path(@technology)
+    else
+      render :edit
+    end
   end
 
   def show
