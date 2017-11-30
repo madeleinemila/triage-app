@@ -1,7 +1,7 @@
 <% if @fix.errors.any? %>
   <ul>
     <% @fix.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
+      <li><%= msg.html_safe %></li>
     <% end %>
   </ul>
 <% end %>

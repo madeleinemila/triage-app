@@ -18,7 +18,7 @@ class Fix < ApplicationRecord
   validate :must_have_an_issue
 
   def must_have_an_issue
-    errors.add(:base, 'Please select which issue this addresses') if self.issues.blank?
+    errors.add(:base, 'Please select a related issue. If this fix relates to a new issue, please <a href="/issues/new">create a new issue</a> first.') if self.issues.blank?
   end
 
   include PgSearch

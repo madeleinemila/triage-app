@@ -25,6 +25,8 @@ class FixesController < ApplicationController
     if @fix.save
       redirect_to fix_path(@fix)
     else
+      @issues = Issue.all.sort_by { |i| i.summary.downcase }
+      @option = params[:id]
       render :new
     end
   end

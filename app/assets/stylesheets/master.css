@@ -395,6 +395,15 @@ a.x-tech-slash:hover {
   max-width: 1200px;
 }
 
+.admin-new-fix a {
+  color: rgba(248, 146, 45, 0.8); /*orange*/
+  text-decoration: none;
+}
+
+.admin-new-fix a:hover {
+  color: rgba(248, 146, 45, 1); /*orange*/
+}
+
 .admin-new .sentence {
   width: 800px;
 }
