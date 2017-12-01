@@ -33,7 +33,7 @@ Customisable, to suit unique combos of tech implemented in different workplaces.
 
 #### DEPLOYED ON HEROKU
 
-
+https://triage.herokuapp.com
 
 #### BUILT WITH
 
@@ -71,4 +71,10 @@ ADMIN: Administrator users can add, edit and delete knowledge base entries.
 
 ## Screenshots
 
-![Sign Up](http://res.cloudinary.com/mrmy/image/upload/v1512107079/Screen_Shot_2017-12-01_at_4.41.44_pm_qycpxp.png)
+![Public Homepage](http://res.cloudinary.com/mrmy/image/upload/v1512107079/Screen_Shot_2017-12-01_at_4.41.44_pm_qycpxp.png)
+
+![Sign Up](http://res.cloudinary.com/mrmy/image/upload/v1512107078/Screen_Shot_2017-12-01_at_4.42.03_pm_y2na5n.png)
+
+![User Homepage](http://res.cloudinary.com/mrmy/image/upload/v1512107078/Screen_Shot_2017-12-01_at_4.42.55_pm_evttvo.png)
+
+![Have You Turned It Off And On](http://res.cloudinary.com/mrmy/image/upload/v1512107271/Screen_Shot_2017-12-01_at_4.47.23_pm_rn0bwm.png)
