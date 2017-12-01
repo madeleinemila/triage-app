@@ -12,9 +12,9 @@ An example:
 
 - A TV journalist, in the newsroom or in the field, has to meet tight deadlines and use a diverse and often unique combo of technologies
 
-- The journalist might not have the technical expertise to be comfortable troubleshooting without guidance
+- If they have a problem, they need a quick, customised answer
 
-- But the solutions are sometimes straightforward
+- The journalist might not have the technical expertise to be comfortable troubleshooting without guidance, but the solutions are sometimes straightforward
 
 - The journalist might not have a user guide, but they are likely to be on a web browser
 
