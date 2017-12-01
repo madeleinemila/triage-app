@@ -1,10 +1,14 @@
 <!-- ISSUE SHOW SINGLE -->
 <div class="show-container">
   <h2 class="issue-shade">ISSUE: <%= @issue.summary %></h2>
-  <p>FURTHER DETAILS<br>
-  <div class="md-issue">
-    <%= markdown( @issue.details ) unless @issue.details.nil? %></p>
-  </div>
+
+  <% if @issue.details.present? %>
+    <p>FURTHER DETAILS<br>
+    <div class="md-issue">
+      <%= markdown( @issue.details ) %></p>
+    </div>
+  <% end %>
+
   <p class="updated-time">Last updated <%= time_ago_in_words @issue.updated_at %> ago</p>
 </div>
 
