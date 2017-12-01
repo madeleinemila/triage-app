@@ -7,7 +7,7 @@
   <ul class=god-results>
     <% @issues.each do |i| %>
       <li>
-        <%= link_to i.summary, issue_path(i.id), class: "green-hover" %>
+        <%= link_to i.summary, issue_path(i.id), class: "green-hover monospace" %>
       </li>
     <% end %>
     <% if flash[:notice] && !@issues.any? %>

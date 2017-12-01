@@ -6,7 +6,7 @@
   <ul class=god-results>
     <% @technologies.each do |t| %>
       <li>
-        <%= link_to t.name, technology_path(t.id), class: "green-hover" %>
+        <%= link_to t.name, technology_path(t.id), class: "green-hover monospace" %>
       </li>
     <% end %>
     <% if flash[:notice] && !@technologies.any? %>

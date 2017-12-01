@@ -17,7 +17,9 @@
   <% if params[:term] %>
     <ul class="god-results">
       <% @results.each do |r| %>
-        <li><%= link_to "#{ r.searchable_type.upcase } - #{ r.content }", r.searchable, class: "green-hover" %></li>
+        <li>
+          <%= link_to "#{ r.searchable_type[0..2].upcase.ljust(10) } #{ r.content }", r.searchable, class: "green-hover whitespace monospace" %>
+        </li>
       <% end %>
       <% if flash[:notice] && !@results.any? %>
         <li><%= flash[:notice] %></li>

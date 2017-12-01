@@ -6,7 +6,7 @@
   <ul class=god-results>
     <% @fixes.each do |f| %>
       <li>
-        <%= link_to f.title, fix_path(f.id), class: "green-hover" %>
+        <%= link_to f.title, fix_path(f.id), class: "green-hover monospace" %>
       </li>
     <% end %>
     <% if flash[:notice] && !@fixes.any? %>
