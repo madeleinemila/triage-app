@@ -16,15 +16,10 @@ An example:
 
 - But the solutions are sometimes straightforward
 
-- The journalist might not have a user guide, but they are likely to be on a web browser**
+- The journalist might not have a user guide, but they are likely to be on a web browser
 
-- Technical staff might also need to spend their time on more complex issues
+- Technical staff might need to spend their time on more complex issues, so both tech and non-tech staff would benefit from a simple but customisable knowledge base
 
-Both sides would benefit from a simple but customisable knowledge base.
-
-Simple, for rapid access to the most important info.
-
-Customisable, to suit unique combos of tech implemented in different workplaces.
 
 
 
@@ -33,7 +28,7 @@ Customisable, to suit unique combos of tech implemented in different workplaces.
 
 #### DEPLOYED ON HEROKU
 
-https://triage.herokuapp.com
+[https://triage.herokuapp.com](https://triage.herokuapp.com){:target="_blank"}
 
 #### BUILT WITH
 
