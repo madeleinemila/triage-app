@@ -12,15 +12,15 @@ An example:
 
 - A TV journalist, in the newsroom or in the field, has to meet tight deadlines and use a diverse and often unique combo of technologies
 
-- The journalist **might not have the technical expertise** to be comfortable troubleshooting without guidance
+- The journalist might not have the technical expertise to be comfortable troubleshooting without guidance
 
-- But the **solutions** are sometimes **straightforward**
+- But the solutions are sometimes straightforward
 
-- The journalist might not have a user guide, but they are likely to be **on a web browser**
+- The journalist might not have a user guide, but they are likely to be on a web browser**
 
 - Technical staff might also need to spend their time on more complex issues
 
-Both sides would benefit from a **simple but customisable knowledge base**.
+Both sides would benefit from a simple but customisable knowledge base.
 
 Simple, for rapid access to the most important info.
 
