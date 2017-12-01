@@ -6,19 +6,19 @@ TRIAGE is a simple, customisable knowledge base app.
 
 Triage is inspired by:
 
-**Tech-heavy workplaces where staff might not be highly tech-skilled, but have to troubleshoot in high-pressure situations**.
+- **Tech-heavy workplaces where staff might not be highly tech-skilled, but have to troubleshoot in high-pressure situations**
 
 An example:
 
-A TV journalist, in the newsroom or in the field, has to meet tight deadlines and use a diverse and often unique combo of technologies.
+- A TV journalist, in the newsroom or in the field, has to meet tight deadlines and use a diverse and often unique combo of technologies.
 
-- Staff **might not have the technical expertise** to be comfortable troubleshooting without guidance
+- The journalist **might not have the technical expertise** to be comfortable troubleshooting without guidance
 
 - But the **solutions** are sometimes **straightforward**
 
-- Staff might not have or read a user guide, but they are likely to be **on a web browser**
+- The journalist might not have or read a user guide, but they are likely to be **on a web browser**
 
-- Technical staff might also need to spend their time on more complex issues.
+- Technical staff might also need to spend their time on more complex issues
 
 Both sides would benefit from a **simple but customisable knowledge base**.
 
@@ -61,4 +61,5 @@ ADMIN: Administrator users can add, edit and delete knowledge base entries.
 - Change password option
 - Pagination
 - Ability to click through show pages without returning to index or search results
-- Popularity option - most accessed entries featured on indexes
+- Popularity option - most accessed entries featured on indexes and/or home
+- Annotations - allow any logged-in user to make their own annotations only visible in their login
