@@ -10,13 +10,13 @@ Triage is inspired by:
 
 An example:
 
-- A TV journalist, in the newsroom or in the field, has to meet tight deadlines and use a diverse and often unique combo of technologies.
+- A TV journalist, in the newsroom or in the field, has to meet tight deadlines and use a diverse and often unique combo of technologies
 
 - The journalist **might not have the technical expertise** to be comfortable troubleshooting without guidance
 
 - But the **solutions** are sometimes **straightforward**
 
-- The journalist might not have or read a user guide, but they are likely to be **on a web browser**
+- The journalist might not have a user guide, but they are likely to be **on a web browser**
 
 - Technical staff might also need to spend their time on more complex issues
 
@@ -30,6 +30,10 @@ Customisable, to suit unique combos of tech implemented in different workplaces.
 
 
 ## THE APP
+
+#### DEPLOYED ON HEROKU
+
+
 
 #### BUILT WITH
 
@@ -63,3 +67,8 @@ ADMIN: Administrator users can add, edit and delete knowledge base entries.
 - Ability to click through show pages without returning to index or search results
 - Popularity option - most accessed entries featured on indexes and/or home
 - Annotations - allow any logged-in user to make their own annotations only visible in their login
+
+
+## Screenshots
+
+![Sign Up](http://res.cloudinary.com/mrmy/image/upload/v1512107079/Screen_Shot_2017-12-01_at_4.41.44_pm_qycpxp.png)
