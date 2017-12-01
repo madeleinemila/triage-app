@@ -465,7 +465,7 @@ a.x-tech-shade:hover {
 .md {
   border-top: 10px solid rgba(209, 219, 47, 1.00); /*green*/
   padding: 15px;
-  min-height: 350px;
+  min-height: 200px;
   color: rgba(15, 15, 15, 1.0);
 }
 
