@@ -4,21 +4,22 @@ TRIAGE is a simple, customisable knowledge base app.
 
 #### THE IDEA
 
-Triage is designed for *tech-heavy workplaces where staff might not be highly tech-skilled, but have to troubleshoot in high-pressure situations*.
+Triage is designed for **tech-heavy workplaces where staff might not be highly tech-skilled, but have to troubleshoot in high-pressure situations**.
 An example: A TV journalist, in the newsroom or in the field, has to meet tight deadlines and use a diverse and often unique combo of technologies.
 
-- Staff *might not have the technical expertise* to be comfortable troubleshooting without guidance
+- Staff **might not have the technical expertise** to be comfortable troubleshooting without guidance
 
-- But the *solutions* are sometimes *straightforward*
+- But the **solutions* are sometimes *straightforward**
 
-- Staff might not have or read a user guide, but they are likely to be *on a web browser*
+- Staff might not have or read a user guide, but they are likely to be **on a web browser**
 
-- Technical staff might have bigger worries than being
+- Technical staff might also need to spend their time on more complex issues.
 
-Both sides would benefit from a *simple but customisable knowledge base*.
+Both sides would benefit from a **simple but customisable knowledge base**.
 Simple, for rapid access to the most important info.
 Customisable, to suit unique combos of tech implemented in different workplaces.
 
+## THE APP
 
 #### BUILT WITH
 
@@ -29,7 +30,7 @@ Customisable, to suit unique combos of tech implemented in different workplaces.
 - A dash of JS (ES6)
 
 
-#### VERSION 1 - THE BASICS
+#### ABOUT VERSION 1
 
 Anyone can browse the entries in the knowledge base.
 
