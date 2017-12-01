@@ -28,7 +28,7 @@ An example:
 
 #### DEPLOYED ON HEROKU
 
-[https://triage.herokuapp.com](https://triage.herokuapp.com){:target="_blank"}
+https://triage.herokuapp.com
 
 #### BUILT WITH
 
