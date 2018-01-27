@@ -32,7 +32,7 @@ h1::after {
   height: 1em;
   width: 100%;
   border-bottom: 1px solid rgba(251, 251, 245, 0.9); /*offwhite*/
-  margin-top: -20px;
+  margin-top: -0.8rem;
 }
 
 h2 {
@@ -294,7 +294,8 @@ http://res.cloudinary.com/mrmy/image/upload/v1512045827/bg_server_blur_qmhhpa.jp
 }
 
 #term {
-  width: 600px;
+  width: 69%;
+  box-sizing: border-box;
 }
 
 #mag-glass-main {
@@ -676,6 +677,10 @@ button:focus {
   color: rgba(79, 123, 185, 1); /*bluegrey*/
 }
 
+.search-buttons {
+  display: inline-block;
+}
+
 
 /*********** BLUR **********/
 
@@ -690,3 +695,23 @@ h1.blur {
 /*server image urls for quick ref
 http://res.cloudinary.com/mrmy/image/upload/v1512045829/bg_server_blur_more_x5dwsk.jpg
 http://res.cloudinary.com/mrmy/image/upload/v1512045827/bg_server_blur_qmhhpa.jpg*/
+
+
+/*********** RESPONSIVE ***************/
+
+@media only screen and (max-width: 640px) {
+  h1 {
+    font-size: 3.1rem;
+  }
+  #term {
+    width: 100%;
+  }
+  .search-buttons {
+    display: block;
+    text-align: right;
+    margin-top: 0.5rem;
+  }
+  .search-buttons * {
+    /* font-size: 2rem; */
+  }
+}
