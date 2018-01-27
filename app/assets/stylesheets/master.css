@@ -65,30 +65,30 @@ h4 {
 
 nav {
   padding: 1em;
-  text-align: right;
+  /* text-align: right; */  /* removed for flexbox */
 }
 
-nav > a {
+nav a {
   padding: 1em;
   font-size: 14px;
   color: rgba(251, 251, 245, 0.9); /*offwhite*/
   text-decoration: none;
 }
 
-nav > a:hover {
+nav a:hover {
   color: rgba(248, 146, 45, 1.00); /*orange*/
 }
 
-nav > .current-user {
+nav .current-user {
   font-size: 14px;
   color: rgba(209, 219, 47, 1.00); /*green*/
 }
 
-nav > .green-nav {
+nav .green-nav {
   color: rgba(209, 219, 47, 1.00); /*green*/
 }
 
-nav > .login {
+nav .login {
   color: rgba(181, 43, 53, 1.00); /*red*/
 }
 
@@ -680,6 +680,24 @@ button:focus {
 .search-buttons {
   display: inline-block;
 }
+
+.flex-nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.flex-1 {
+  flex: 1;
+  /* display: inline-block; */
+}
+
+.flex-first-nav {
+  flex: 5;
+}
+
+
 
 
 /*********** BLUR **********/

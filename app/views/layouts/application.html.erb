@@ -12,25 +12,30 @@
 
   <body>
     <div class="container">
-      <nav>
-        <%= link_to 'Home / Search', root_path, class: "green-nav" %>
-        <%= link_to 'Browse Issues', issues_path %>
-        <%= link_to 'Browse Fixes', fixes_path %>
-        <%= link_to 'Browse Tech', technologies_path %>
-        <% if (@current_user.present? && @current_user.admin?) %>
-          <%= link_to 'New Issue', new_issue_path %>
-          <%= link_to 'New Fix', new_fix_path %>
-          <%= link_to 'New Tech', new_technology_path %>
-          <%= link_to 'All Users', users_path %>
-        <% end %>
-        <% if @current_user.present? %>
-          <%= link_to 'Edit Profile', edit_user_path(@current_user) %>
-          <%= link_to 'Logout', login_path, :method => 'delete' %>
-          <span class="current-user">Logged in as: <%= @current_user.name %></span>
-        <% else %>
+      <nav class="flex-nav">
+        <div class="flex-first-nav">
+          <%= link_to 'QUICK SEARCH', root_path, class: "green-nav" %>
+        </div>
+        <div class="flex-second-nav">
+          <%= link_to 'Browse Issues', issues_path %>
+          <%= link_to 'Browse Fixes', fixes_path %>
+          <%= link_to 'Browse Tech', technologies_path %>
+          <% if (@current_user.present? && @current_user.admin?) %>
+            <%= link_to 'New Issue', new_issue_path %>
+            <%= link_to 'New Fix', new_fix_path %>
+            <%= link_to 'New Tech', new_technology_path %>
+            <%= link_to 'All Users', users_path %>
+          <% end %>
+
+          <% if @current_user.present? %>
+            <%= link_to 'Edit Profile', edit_user_path(@current_user) %>
+            <%= link_to 'Logout', login_path, :method => 'delete' %>
+            <span class="current-user">Logged in as: <%= @current_user.name %></span>
+          <% else %>
           <%= link_to 'Sign Up', new_user_path, class: "green-nav"  %>
           <%= link_to 'Login', login_path, class: "login"  %>
-        <% end %>
+          <% end %>
+        </div>
       </nav>
       <h1 class="main-heading">TRIAGE</h1>
       <%= yield %>
