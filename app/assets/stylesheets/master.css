@@ -717,7 +717,21 @@ http://res.cloudinary.com/mrmy/image/upload/v1512045827/bg_server_blur_qmhhpa.jp
 
 /*********** RESPONSIVE ***************/
 
-@media only screen and (max-width: 660px) {  /* went for 660px to break nav at good point */
+
+
+#hamburger {
+  text-align: right;
+  display: none;
+  font-size: 2rem;
+  padding: 0 10px;
+  margin-top: -12px;
+}
+
+#hamburger:hover {
+  color: rgba(189, 199, 27, 0.75); /*green*/
+}
+
+@media only screen and (max-width: 668px) {  /* to break nav at good point */
   h1 {
     font-size: 3.1rem;
   }
@@ -733,24 +747,12 @@ http://res.cloudinary.com/mrmy/image/upload/v1512045827/bg_server_blur_qmhhpa.jp
     /* font-size: 2rem; */
   }
   .nav-item {
-    display: block;
+    display: none;
     text-align: right;
     background-color: rgba(0, 0, 0, 0.6);
     border-radius: 5px;
   }
-  /* .nav-item { */
-
-  /* } */
-}
-
-#hamburger {
-  text-align: right;
-  display: block;
-  font-size: 2rem;
-  padding: 0 10px;
-  margin-top: -12px;
-}
-
-#hamburger:hover {
-  color: rgba(189, 199, 27, 0.75); /*green*/
+  #hamburger {
+    display: block;
+  }
 }
