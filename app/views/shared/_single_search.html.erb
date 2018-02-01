@@ -2,7 +2,7 @@
 
   <!-- search bar -->
   <%= form_tag(@search[:path], method: :get) do %>
-    <%= text_field_tag 'term', params[:term], :autofocus => true, placeholder: "#{@search[:type]}", class: "search sentence" %>
+    <%= text_field_tag 'term', params[:term], :autofocus => true, placeholder: "#{@search[:type]}", class: "search sentence #{@search[:class]}-field" %>
     <div class="search-buttons">
       <span class="slash <%= "#{@search[:class]}" %>">/</span>
       <%= button_tag(type: 'submit', class: "btn-#{@search[:class]} submit", id: 'mag-glass-main') do %>

@@ -21,4 +21,7 @@ document.addEventListener('turbolinks:load', function() {
       navCount++;
     }
   });
+
+  // also check if search placeholder text needs to be shortened
+  smallScreenSearchPrompt();
 });

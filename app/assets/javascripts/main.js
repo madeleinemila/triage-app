@@ -24,7 +24,8 @@ const smallScreenSearchPrompt = function() {
   const elem = document.getElementById('term');
   if (window.innerWidth < 955) {
     elem.placeholder = "Need help? Search here.";
-  } else {
-    elem.placeholder = "Need help?  You can ask me about an issue or a procedure you need to know.";
   }
+  // else {
+  //   elem.placeholder = "Need help?  You can ask me about an issue or a procedure you need to know."; TODO custom msgs for each diff search page
+  // }
 };
