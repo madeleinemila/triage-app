@@ -305,6 +305,10 @@ http://res.cloudinary.com/mrmy/image/upload/v1512045827/bg_server_blur_qmhhpa.jp
   vertical-align: middle;
 }
 
+.mag-glass-multi-shell {
+  transform: translateY(-6px); // to align better with X
+}
+
 .mag { /* for alt local image */
   width: 40px;
   transform: rotate(-10deg);
@@ -319,8 +323,20 @@ http://res.cloudinary.com/mrmy/image/upload/v1512045827/bg_server_blur_qmhhpa.jp
   transform: translatey(-2px) rotate(-8deg);
 }
 
-.fa-search:hover {
+.mag-glass-multi-shell:hover * {
     color: rgba(181, 43, 53, 1.00);
+}
+
+.btn-issue-shade:hover * {
+  color: rgba(248, 146, 45, 1.00); /*orange*/
+}
+
+.btn-fix-shade:hover * {
+  color: rgba(209, 219, 47, 1.00); /*green*/
+}
+
+.btn-tech-shade:hover * {
+  color: rgba(79, 123, 185, 1.00); /*bluegrey*/
 }
 
 .btn-issue-shade i:hover {
