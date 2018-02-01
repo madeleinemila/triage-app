@@ -3,14 +3,16 @@
   <!-- search bar -->
   <%= form_tag(@search[:path], method: :get) do %>
     <%= text_field_tag 'term', params[:term], :autofocus => true, placeholder: "#{@search[:type]}", class: "search sentence" %>
-    <span class="slash <%= "#{@search[:class]}" %>">/</span>
-    <%= button_tag(type: 'submit', class: "btn-#{@search[:class]} submit", id: 'mag-glass-main') do %>
-      <div class="mag-container">
-        <i class="fa fa-search fa-flip-horizontal" aria-hidden="true"></i>
-      </div>
-      <%# alternate mag-glass local image: image_tag 'mag-white.png', class: "mag" %>
-    <% end %>
-    <%= link_to 'X', @search[:path], class: "clear-search x-#{@search[:class]}" %>
+    <div class="search-buttons">
+      <span class="slash <%= "#{@search[:class]}" %>">/</span>
+      <%= button_tag(type: 'submit', class: "btn-#{@search[:class]} submit", id: 'mag-glass-main') do %>
+        <div class="mag-container">
+          <i class="fa fa-search fa-flip-horizontal" aria-hidden="true"></i>
+        </div>
+        <%# alternate mag-glass local image: image_tag 'mag-white.png', class: "mag" %>
+      <% end %>
+      <%= link_to 'X', @search[:path], class: "clear-search x-#{@search[:class]}" %>
+    </div>
   <% end %>
 
 </div>
