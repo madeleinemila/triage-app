@@ -5,7 +5,7 @@
     <%= text_field_tag 'term', params[:term], :autofocus => true, placeholder: "Need help?  You can ask me about an issue or a procedure you need to know.", class: "search home-field" %>
     <div class="search-buttons">
       <span class="slash">/</span>
-      <%= button_tag(type: 'submit', class: "btn submit", id: 'mag-glass-main') do %>
+      <%= button_tag(type: 'submit', class: "btn submit mag-glass-multi-shell", id: 'mag-glass-main') do %>
         <div class="mag-container">
           <i class="fa fa-search fa-flip-horizontal" aria-hidden="true"></i>
         </div>
@@ -20,7 +20,7 @@
     <ul class="god-results">
       <% @results.each do |r| %>
         <li>
-          <%= link_to "#{ r.searchable_type[0..2].upcase.ljust(10) } #{ r.content }", r.searchable, class: "green-hover whitespace monospace" %>
+          <%= link_to "#{ r.searchable_type[0..2].upcase.ljust(10) }- #{ r.content }", r.searchable, class: "green-hover whitespace monospace" %>
         </li>
       <% end %>
       <% if flash[:notice] && !@results.any? %>

@@ -6,6 +6,7 @@
 
 body {
   font-family: 'Avenir', sans-serif;
+  background-color: #111; // fallback, and for overflow
 }
 
 h1 {
@@ -313,7 +314,7 @@ http://res.cloudinary.com/mrmy/image/upload/v1512045827/bg_server_blur_qmhhpa.jp
 
 .fa-search {
   color: rgba(251, 251, 245, 1);
-  font-size: 41px !important;
+  font-size: 40px !important;
 }
 
 .mag-container {
@@ -336,17 +337,29 @@ http://res.cloudinary.com/mrmy/image/upload/v1512045827/bg_server_blur_qmhhpa.jp
   color: rgba(79, 123, 185, 1.00); /*bluegrey*/
 }
 
-.btn-issue-shade i:hover {
+.btn-issue-shade:focus * {
   color: rgba(248, 146, 45, 1.00); /*orange*/
 }
 
-.btn-fix-shade i:hover {
+.btn-fix-shade:focus * {
   color: rgba(209, 219, 47, 1.00); /*green*/
 }
 
-.btn-tech-shade i:hover {
+.btn-tech-shade:focus * {
   color: rgba(79, 123, 185, 1.00); /*bluegrey*/
 }
+
+// .btn-issue-shade i:hover {
+//   color: rgba(248, 146, 45, 1.00); /*orange*/
+// }
+//
+// .btn-fix-shade i:hover {
+//   color: rgba(209, 219, 47, 1.00); /*green*/
+// }
+//
+// .btn-tech-shade i:hover {
+//   color: rgba(79, 123, 185, 1.00); /*bluegrey*/
+// }
 
 a.clear-search {
   color: rgba(251, 251, 245, 1);
@@ -364,23 +377,25 @@ a.clear-search:hover, a.clear-search:focus {
   color: rgba(181, 43, 53, 1.00); /*red*/
 }
 
-a.x-issue-shade:hover {
+a.x-issue-shade:hover, a.x-issue-shade:focus {
   color: rgba(248, 146, 45, 1.00); /*orange*/
 }
 
-a.x-fix-shade:hover {
+a.x-fix-shade:hover, a.x-fix-shade:focus {
   color: rgba(209, 219, 47, 1.00); /*green*/
 }
 
-a.x-tech-shade:hover {
+a.x-tech-shade:hover, a.x-tech-shade:focus {
   color: rgba(79, 123, 185, 1.00); /*bluegrey*/
 }
 
 .god-results {
-  max-width: 960px;
+  // max-width: 960px;
+  width: 100%;
   margin: 0 auto;
   padding-bottom: 50px;
   padding-left: 80px;
+  box-sizing: border-box;
 }
 
 .god-results li {
@@ -767,5 +782,11 @@ http://res.cloudinary.com/mrmy/image/upload/v1512045827/bg_server_blur_qmhhpa.jp
   }
   #hamburger {
     display: block;
+  }
+  .god-results {
+    padding-left: 40px;
+  }
+  .whitespace {
+    white-space: normal;
   }
 }
