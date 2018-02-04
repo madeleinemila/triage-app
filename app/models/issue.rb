@@ -14,11 +14,22 @@ class Issue < ApplicationRecord
   has_and_belongs_to_many :fixes
   has_and_belongs_to_many :technologies
 
-  validates :summary, :presence => true
+  validates :summary, :presence => true, :uniqueness => true
   validate :must_have_one_tech
+  validate :no_xss
 
   def must_have_one_tech
     errors.add(:base, 'Please select at least one associated technology. If the tech is not listed, please <a href="/technologies/new">create it</a> first.') if self.technologies.blank?
+  end
+
+  def no_xss
+    xss_present = false
+    xss_present = true if /<script>/i =~ self.details
+    xss_present = true if /<\/script>/i =~ self.details
+    xss_present = true if /javascript\:/i =~ self.details
+    xss_present = true if /<%/i =~ self.details
+    xss_present = true if /%>/i =~ self.details
+    errors.add(:base, "Your entry resembles a code injection attack. Please remove embedded script tags (and don't be evil).") if xss_present
   end
 
   include PgSearch

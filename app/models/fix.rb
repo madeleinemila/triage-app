@@ -16,6 +16,17 @@ class Fix < ApplicationRecord
   validates :title, :presence => true
   validates :steps, :presence => true
   validate :must_have_an_issue
+  validate :no_xss
+
+  def no_xss
+    xss_present = false
+    xss_present = true if /<script>/i =~ self.steps
+    xss_present = true if /<\/script>/i =~ self.steps
+    xss_present = true if /javascript\:/i =~ self.steps
+    xss_present = true if /<%/i =~ self.steps
+    xss_present = true if /%>/i =~ self.steps
+    errors.add(:base, "Your entry resembles a code injection attack. Please remove embedded script tags (and don't be evil).") if xss_present
+  end
 
   def must_have_an_issue
     errors.add(:base, 'Please select a related issue. If this fix relates to a new issue, please <a href="/issues/new">create a new issue</a> first.') if self.issues.blank?

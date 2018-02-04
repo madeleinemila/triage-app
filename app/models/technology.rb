@@ -15,6 +15,18 @@ class Technology < ApplicationRecord
 
   validates :name, :presence => true, :uniqueness => true
   validates :links, :presence => true
+  validate :no_xss
+
+
+  def no_xss
+    xss_present = false
+    xss_present = true if /<script>/i =~ self.links
+    xss_present = true if /<\/script>/i =~ self.links
+    xss_present = true if /javascript\:/i =~ self.links
+    xss_present = true if /<%/i =~ self.links
+    xss_present = true if /%>/i =~ self.links
+    errors.add(:base, "Your entry resembles a code injection attack. Please remove embedded script tags (and don't be evil).") if xss_present
+  end
 
   include PgSearch
   pg_search_scope :search_by_name, against: :name,
