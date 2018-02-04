@@ -69,6 +69,10 @@ h4 {
     letter-spacing: -0.5px;
 }
 
+.new-heading {
+  padding: 0 10px;
+}
+
 /******************** NAV **************************/
 
 nav {
@@ -110,7 +114,7 @@ fieldset {
 label {
   display: inline-block;
   vertical-align: top;
-  width: 150px;
+  width: 155px;
 }
 
 input, textarea {
@@ -153,6 +157,11 @@ input[type="submit"] {
 
 form {
   padding: 50px;
+}
+
+#new_issue, #new_fix, #new_technology {
+  padding-left: 0;
+  padding-right: 10px;
 }
 
 form.new-user {
@@ -461,10 +470,13 @@ a.x-tech-shade:hover, a.x-tech-shade:focus {
 
 .user-list {
   padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
 }
 
 .admin-new {
-  max-width: 1200px;
+  max-width: 960px;
+  margin: 0 auto;
 }
 
 .admin-new-fix a {
@@ -486,7 +498,7 @@ a.x-tech-shade:hover, a.x-tech-shade:focus {
 }
 
 .admin-new .sentence {
-  width: 800px;
+  width: 91%;
 }
 
 .all-list li {
@@ -676,6 +688,7 @@ input:focus, textarea:focus {
 select {
     border: 1px #ddd solid;
     font-family: 'Avenir', sans-serif;
+    width: 77%;
 }
 
 button:focus {
