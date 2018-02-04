@@ -1,15 +1,21 @@
+
+
 <% if @current_user.present? %>
-
-  <% unless @current_user.favorite_fixes.exists?(id: @fix.id) %>
-
-    <p class="pin-status"><%= flash.alert if flash.alert.present? %>&nbsp;</p>
-    <%= link_to 'Add to pins', favorite_fixes_path(fix_id: @fix), method: :post, :class => "pin pin-fix"  %>
-
-  <% else %>
-
-    <p class="pin-status"><a href="/">PINNED TO HOME PAGE</a></p>
-    <%= link_to 'Remove from pins', favorite_fix_path(@fix), method: :delete, :class => "pin pin-fix"  %>
-
-  <% end %>
-
+  <div class="pins-flex">
+      <% unless @current_user.favorite_fixes.exists?(id: @fix.id) %>
+        <div class="pins-flex-l">
+          <p class="pin-status"><%= flash.alert if flash.alert.present? %>&nbsp;</p>
+        </div>
+        <div class="pins-flex-r">
+          <p class="pin-status pin-status-btn"><%= link_to 'Add to pins', favorite_fixes_path(fix_id: @fix), method: :post, :class => "pin pin-fix"  %></p>
+        </div>
+      <% else %>
+        <div class="pins-flex-l">
+          <p class="pin-status"><a href="/">PINNED TO HOME PAGE</a></p>
+        </div>
+        <div class="pins-flex-r">
+          <p class="pin-status pin-status-btn"><%= link_to 'Remove from pins', favorite_fix_path(@fix), method: :delete, :class => "pin pin-fix"  %></p>
+        </div>
+      <% end %>
+  </div>
 <% end %>

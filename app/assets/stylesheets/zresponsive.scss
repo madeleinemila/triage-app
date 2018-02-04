@@ -35,9 +35,9 @@
   h1 {
     font-size: 3.1rem;
   }
-  h1.main-heading::after {
-    margin-top: -0.8rem;
-  }
+  // h1.main-heading::after {
+  //   margin-top: -0.8rem;
+  // }
   #term {
     width: 100%;
   }
@@ -67,4 +67,16 @@
   .root-nav {
     padding-left: 0;
   }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+      h1.main-heading::after {
+            margin-top: -1.2rem; // because margin-top was different sizes bw chrome and ff
+      }
+
+      @media only screen and (max-width: 668px) {
+        h1.main-heading::after {
+          margin-top: -0.8rem;
+        }
+      }
 }

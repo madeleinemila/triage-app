@@ -7,14 +7,13 @@
 
 <div class="lower-container">
     <div class="md">
-      <h3>PROCEDURE</h3>
-      <%= markdown( @fix.steps ) unless @fix.steps.nil? %>
+      <div class="center">
+          <h3>PROCEDURE</h3>
+          <%= markdown( @fix.steps ) unless @fix.steps.nil? %>
+      </div>
     </div>
 
   <div class="inner-bound">
-
-
-
     <h3>This fix relates to this issue:</h3>
     <ul class="all-list issue-list">
       <% @fix.issues.each do |i| %>

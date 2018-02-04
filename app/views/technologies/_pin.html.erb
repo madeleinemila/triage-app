@@ -1,15 +1,21 @@
+
+
 <% if @current_user.present? %>
-
-  <% unless @current_user.favorite_technologies.exists?(id: @technology.id) %>
-
-    <p class="pin-status"><%= flash.alert if flash.alert.present? %>&nbsp;</p>
-    <%= link_to 'Add to pins', favorite_technologies_path(technology_id: @technology), method: :post, :class => "pin pin-tech"  %>
-
-  <% else %>
-
-    <p class="pin-status"><a href="/">PINNED TO HOME PAGE</a></p>
-    <%= link_to 'Remove from pins', favorite_technology_path(@technology), method: :delete, :class => "pin pin-tech"  %>
-
-  <% end %>
-
+  <div class="pins-flex">
+      <% unless @current_user.favorite_technologies.exists?(id: @technology.id) %>
+        <div class="pins-flex-l">
+          <p class="pin-status"><%= flash.alert if flash.alert.present? %>&nbsp;</p>
+        </div>
+        <div class="pins-flex-r">
+          <p class="pin-status pin-status-btn"><%= link_to 'Add to pins', favorite_technologies_path(technology_id: @technology), method: :post, :class => "pin pin-tech"  %></p>
+        </div>
+      <% else %>
+        <div class="pins-flex-l">
+          <p class="pin-status"><a href="/">PINNED TO HOME PAGE</a></p>
+        </div>
+        <div class="pins-flex-r">
+          <p class="pin-status pin-status-btn"><%= link_to 'Remove from pins', favorite_technology_path(@technology), method: :delete, :class => "pin pin-tech"  %></p>
+        </div>
+      <% end %>
+  </div>
 <% end %>
