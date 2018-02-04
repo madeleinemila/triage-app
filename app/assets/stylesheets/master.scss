@@ -495,12 +495,14 @@ a.x-tech-shade:hover, a.x-tech-shade:focus {
   list-style-type: none;
 }
 
-.all-list li::before {
+.all-list li::before { // custom bullet - larger dot
   content: "\2022";  /* unicode of character to precede list item */
   font-size: 2em;
   padding-right: 1.1225em;
   position: relative;
   top: 5px;
+  margin-left: -52px; // so text looks correctly indented
+  padding-left: 10px; // ^^
 }
 
 .issue-list {

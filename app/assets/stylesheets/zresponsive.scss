@@ -77,6 +77,11 @@
     padding-left: 20px;
     padding-bottom: 10px;
   }
+  .all-list li::before { // custom bullet - larger dot
+    font-size: 1em;
+    top: 0;
+    margin-left: -36px;
+  }
 }
 
 @media screen and (-webkit-min-device-pixel-ratio:0) {
