@@ -1,6 +1,11 @@
 <div class="form-inner-bound">
   <h1 class="user-form-heading">EDIT YOUR PROFILE</h1>
-
+  <p class="user-form-heading notice">
+      <% if @user.errors.any? %>
+        Please try again:
+        <%=  @user.errors.full_messages.join(', ').downcase %>
+      <% end %>&nbsp;
+  </p>
   <div class="user-info">
     <%= form_for @user do |f| %>
       <fieldset>
@@ -16,12 +21,6 @@
         <%= f.submit "Update profile" %>
       </fieldset>
     <% end %>
-    <p class="user-form-heading notice">
-        <% if @user.errors.any? %>
-          Please try again:
-          <%=  @user.errors.full_messages.join(', ').downcase %>
-        <% end %>&nbsp;
-    </p>
   </div>
 
 </div>

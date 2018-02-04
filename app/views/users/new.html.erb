@@ -3,6 +3,14 @@
 
     <div class="new-user-info">
       <p class="user-form-heading">Create an account to pin entries to your home page</p>
+      <p class="user-form-heading notice">
+          <% if @user.errors.any? %>
+            Please try again:
+            <%=  @user.errors.full_messages.join(', ').downcase %>
+          <%# else %>
+            <!-- <p>&nbsp;</p> -->
+          <% end %>
+      </p>
       <%= form_for @user do |f| %>
         <fieldset>
               <%= f.text_field :name, :autofocus => true, :placeholder => "Name" %>
@@ -21,12 +29,7 @@
               <%= f.submit "Create account" %>
         </fieldset>
       <% end %>
-      <p class="user-form-heading notice">
-          <% if @user.errors.any? %>
-            Please try again:
-            <%=  @user.errors.full_messages.join(', ').downcase %>
-          <% end %>&nbsp;
-      </p>
+
 
     </div>
 </div>

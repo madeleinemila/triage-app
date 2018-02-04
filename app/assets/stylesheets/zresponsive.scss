@@ -52,7 +52,10 @@
   .whitespace {
     white-space: normal;
   }
-  .new-user-info, .user-info input {
+  .user-info input {
+    width: 100%;
+  }
+  .new-user-info input {
     width: 100%;
   }
   .new_user {
@@ -66,6 +69,13 @@
   }
   .root-nav {
     padding-left: 0;
+  }
+  .user-form-heading {
+    padding-left: 20px;
+  }
+  .user-form-heading {
+    padding-left: 20px;
+    padding-bottom: 10px;
   }
 }
 

@@ -1,6 +1,6 @@
 <div class="form-inner-bound">
   <h1 class="user-form-heading">LOGIN</h1>
-
+  <p class="user-form-heading notice"><%= flash[:error] %></p>
   <div class="user-info">
     <%= form_tag login_path do %>
     <% if flash[:error] %>
@@ -24,7 +24,7 @@
         <%= submit_tag "Login" %>
       </fieldset>
     <% end %>
-    <p class="user-form-heading notice"><%= flash[:error] %>&nbsp;</p>
+
   </div>
 
 </div>

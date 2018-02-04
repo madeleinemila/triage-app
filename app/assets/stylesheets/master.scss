@@ -222,8 +222,12 @@ form.new-user {
 }
 
 .notice {
-  padding-bottom: 25px;
+  // padding-bottom: 25px;
   padding-top: 0;
+}
+
+.user-form-heading.notice {
+  color: rgba(248, 146, 45, 1.00);
 }
 
 /******************** SEARCH ******************/
@@ -779,7 +783,7 @@ div.blur {
 
 h1.blur {
   filter: blur(10px);
-  margin-bottom: 0;
+  margin-bottom: -90px;
 }
 
 /*server image urls for quick ref
