@@ -18,19 +18,19 @@
         </div>
         <div class="flex-second-nav">
           <a href="javascript:void(0);" id="hamburger">&#9776;</a>
-          <%= link_to 'Browse Issues', issues_path, class: "nav-item" %>
-          <%= link_to 'Browse Fixes', fixes_path, class: "nav-item" %>
-          <%= link_to 'Browse Tech', technologies_path, class: "nav-item" %>
+          <%= link_to 'Browse Issues', issues_path, class: "nav-item orange-hover" %>
+          <%= link_to 'Browse Fixes', fixes_path, class: "nav-item green-hover" %>
+          <%= link_to 'Browse Tech', technologies_path, class: "nav-item blue-hover" %>
           <% if (@current_user.present? && @current_user.admin?) %>
-            <%= link_to 'New Issue', new_issue_path %>
-            <%= link_to 'New Fix', new_fix_path %>
-            <%= link_to 'New Tech', new_technology_path %>
-            <%= link_to 'All Users', users_path %>
+            <%= link_to 'New Issue', new_issue_path, class: "nav-item orange-hover" %>
+            <%= link_to 'New Fix', new_fix_path, class: "nav-item green-hover" %>
+            <%= link_to 'New Tech', new_technology_path, class: "nav-item blue-hover" %>
+            <%= link_to 'All Users', users_path, class: "nav-item" %>
           <% end %>
 
           <% if @current_user.present? %>
-            <%= link_to 'Edit Profile', edit_user_path(@current_user) %>
-            <%= link_to 'Logout', login_path, :method => 'delete' %>
+            <%= link_to 'Edit Profile', edit_user_path(@current_user), class: "nav-item" %>
+            <%= link_to 'Logout', login_path, :method => 'delete', class: "nav-item" %>
             <span class="current-user">Logged in as: <%= @current_user.name %></span>
           <% else %>
           <%= link_to 'Sign Up', new_user_path, class: "green-nav nav-item"  %>

@@ -33,7 +33,7 @@ h1::after {
   height: 1em;
   width: 100%;
   border-bottom: 1px solid rgba(251, 251, 245, 0.9); /*offwhite*/
-  margin-top: -0.8rem;
+  margin-top: -1.2rem;
 }
 
 h2 {
@@ -233,7 +233,7 @@ input.search {
 }
 
 .slash {
-    font-size: 58px;
+    font-size: 50px;
     font-family: 'Nunito', sans-serif;
     font-weight: bold;
     font-style: italic;
@@ -304,7 +304,7 @@ http://res.cloudinary.com/mrmy/image/upload/v1512045827/bg_server_blur_qmhhpa.jp
   color: white;
   border: none;
   vertical-align: middle;
-  transform: translateY(-6px); // to align better with X
+  transform: translateY(-3px); // to align better with X
 }
 
 .mag { /* for alt local image */
@@ -318,7 +318,7 @@ http://res.cloudinary.com/mrmy/image/upload/v1512045827/bg_server_blur_qmhhpa.jp
 }
 
 .mag-container {
-  transform: translatey(-2px) rotate(-8deg);
+  transform: translatey(-2px) rotate(-10deg);
 }
 
 .mag-glass-multi-shell:hover * {
@@ -411,6 +411,14 @@ a.x-tech-shade:hover, a.x-tech-shade:focus {
 
 .green-hover:hover {
   color: rgba(209, 219, 47, 1.00); /*green*/
+}
+
+.orange-hover:hover {
+  color: rgba(248, 146, 45, 1.00); /*orange*/
+}
+
+.blue-hover:hover {
+  color: rgba(79, 123, 185, 1.00); /*bluegrey*/
 }
 
 /********* LOWER HALF ***************************/
@@ -707,6 +715,7 @@ button:focus {
 
 .search-buttons {
   display: inline-block;
+  line-height: 50px;
 }
 
 .flex-nav {
@@ -741,52 +750,3 @@ h1.blur {
 /*server image urls for quick ref
 http://res.cloudinary.com/mrmy/image/upload/v1512045829/bg_server_blur_more_x5dwsk.jpg
 http://res.cloudinary.com/mrmy/image/upload/v1512045827/bg_server_blur_qmhhpa.jpg*/
-
-
-/*********** RESPONSIVE ***************/
-
-
-
-#hamburger {
-  text-align: right;
-  display: none;
-  font-size: 2rem;
-  padding: 0 10px;
-  margin-top: -12px;
-}
-
-#hamburger:hover {
-  color: rgba(189, 199, 27, 0.75); /*green*/
-}
-
-@media only screen and (max-width: 668px) {  /* to break nav at good point */
-  h1 {
-    font-size: 3.1rem;
-  }
-  #term {
-    width: 100%;
-  }
-  .search-buttons {
-    display: block;
-    text-align: right;
-    margin-top: 0.5rem;
-  }
-  .search-buttons * {
-    /* font-size: 2rem; */
-  }
-  .nav-item {
-    display: none;
-    text-align: right;
-    background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 5px;
-  }
-  #hamburger {
-    display: block;
-  }
-  .god-results {
-    padding-left: 40px;
-  }
-  .whitespace {
-    white-space: normal;
-  }
-}
