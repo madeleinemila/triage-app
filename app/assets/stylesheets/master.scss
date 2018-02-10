@@ -420,11 +420,12 @@ a.x-tech-shade:hover, a.x-tech-shade:focus {
 }
 
 .god-results {
-  // max-width: 960px;
+  max-width: 960px;
   width: 100%;
   margin: 0 auto;
   padding-bottom: 50px;
-  padding-left: 80px;
+  padding-left: 10px;
+  padding-right: 10px;
   box-sizing: border-box;
 }
 
@@ -541,11 +542,11 @@ a.x-tech-shade:hover, a.x-tech-shade:focus {
   color: rgba(15, 15, 15, 1.0);
 }
 
-.md > h1 {
+.md h1 {
   color: rgba(15, 15, 15, 1.0);
 }
 
-.md > h1::after {
+.md h1::after {
   border-bottom: 1px solid rgba(15, 15, 15, 1.0);
 }
 
