@@ -4,7 +4,7 @@ TRIAGE is a simple, customisable knowledge base app.
 
 #### THE IDEA
 
-Triage is inspired by:
+Triage was inspired by:
 
 - **Tech-heavy workplaces where staff might not be highly tech-skilled, but have to troubleshoot in high-pressure situations**
 
@@ -20,15 +20,7 @@ An example:
 
 - Technical staff might need to spend their time on more complex issues, so both tech and non-tech staff would benefit from a simple but customisable knowledge base
 
-
-
-
-
 ## THE APP
-
-#### DEPLOYED ON HEROKU
-
-https://triage.herokuapp.com
 
 #### BUILT WITH
 
@@ -37,7 +29,6 @@ https://triage.herokuapp.com
 - HTML5
 - CSS3
 - A dash of JS (ES6)
-
 
 #### ABOUT VERSION 1
 
@@ -51,7 +42,6 @@ SIGN UP: If you create an account, you can pin favourite knowledge base entries 
 
 ADMIN: Administrator users can add, edit and delete knowledge base entries.
 
-
 #### FUTURE UPDATE IDEAS
 
 - Responsive design
@@ -63,7 +53,6 @@ ADMIN: Administrator users can add, edit and delete knowledge base entries.
 - Popularity option - most accessed entries featured on indexes and/or home
 - Annotations - allow any logged-in user to make their own annotations only visible in their login
 
-
 ## Screenshots
 
 ![Public Homepage](http://res.cloudinary.com/mrmy/image/upload/v1512107079/Screen_Shot_2017-12-01_at_4.41.44_pm_qycpxp.png)
@@ -73,3 +62,7 @@ ADMIN: Administrator users can add, edit and delete knowledge base entries.
 ![User Homepage](http://res.cloudinary.com/mrmy/image/upload/v1512107078/Screen_Shot_2017-12-01_at_4.42.55_pm_evttvo.png)
 
 ![Have You Turned It Off And On](http://res.cloudinary.com/mrmy/image/upload/v1512107271/Screen_Shot_2017-12-01_at_4.47.23_pm_rn0bwm.png)
+
+![Fuzzy Search](https://res.cloudinary.com/mrmy/image/upload/v1709228679/triage-trigram-search_ds6ev4.png)
+
+![Create New](https://res.cloudinary.com/mrmy/image/upload/v1709228708/triage-new-issue_j9ruwv.png)
